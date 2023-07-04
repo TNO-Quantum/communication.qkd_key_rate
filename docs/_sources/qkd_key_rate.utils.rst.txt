@@ -1,0 +1,15 @@
+qkd\_key\_rate.utils package
+============================
+
+.. automodule:: qkd_key_rate.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. toctree::
+   :maxdepth: 4
+
+
+   qkd_key_rate.utils.entropy
+   qkd_key_rate.utils.required_linktime

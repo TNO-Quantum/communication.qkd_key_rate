@@ -1,0 +1,16 @@
+qkd\_key\_rate.protocols.classical package
+==========================================
+
+.. automodule:: qkd_key_rate.protocols.classical
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. toctree::
+   :maxdepth: 4
+
+
+   qkd_key_rate.protocols.classical.cascade
+   qkd_key_rate.protocols.classical.privacy_amplification
+   qkd_key_rate.protocols.classical.winnow

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qkd_key_rate.protocols.quantum.bbm92 &mdash; tno.quantum.communication.qkd_key_rate</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            tno.quantum.communication.qkd_key_rate
+              <img src="../../../../_static/TNO_wit.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qkd_key_rate.html">qkd_key_rate package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qkd_key_rate.base.html">qkd_key_rate.base package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.config.html">qkd_key_rate.base.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.corrector.html">qkd_key_rate.base.corrector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.detector.html">qkd_key_rate.base.detector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.keyrate.html">qkd_key_rate.base.keyrate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.message.html">qkd_key_rate.base.message module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.parity_strategy.html">qkd_key_rate.base.parity_strategy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.permutations.html">qkd_key_rate.base.permutations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.receiver.html">qkd_key_rate.base.receiver module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.schedule.html">qkd_key_rate.base.schedule module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.sender.html">qkd_key_rate.base.sender module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qkd_key_rate.protocols.html">qkd_key_rate.protocols package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.html">qkd_key_rate.protocols.classical package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.cascade.html">qkd_key_rate.protocols.classical.cascade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.privacy_amplification.html">qkd_key_rate.protocols.classical.privacy_amplification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.winnow.html">qkd_key_rate.protocols.classical.winnow module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.html">qkd_key_rate.protocols.quantum package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.bb84.html">qkd_key_rate.protocols.quantum.bb84 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.bb84_single_photon.html">qkd_key_rate.protocols.quantum.bb84_single_photon module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html">qkd_key_rate.protocols.quantum.bbm92 module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qkd_key_rate.utils.html">qkd_key_rate.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.utils.entropy.html">qkd_key_rate.utils.entropy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.utils.required_linktime.html">qkd_key_rate.utils.required_linktime module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">tno.quantum.communication.qkd_key_rate</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">qkd_key_rate.protocols.quantum.bbm92</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for qkd_key_rate.protocols.quantum.bbm92</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Classes to perform key error rate estimate for the BBM92 QKD protocol.</span>
+
+<span class="sd">Quantum Key Distribution (QKD) protocols rely on an entangled photon source that</span>
+<span class="sd">produces entangled photon pairs, which are distributed over two parties. Both parties</span>
+<span class="sd">randomly choose one of two predefined measurement bases. As the photons are entangled,</span>
+<span class="sd">non-random results will only be obtained for specific combinations of basis choices.</span>
+<span class="sd">Detection events are sifted, where only the detection events corresponding to events</span>
+<span class="sd">where both parties measured in an appropriate basis should be kept. Part of the</span>
+<span class="sd">resulting sifted key is made public which can be used to estimate the key error rate.</span>
+
+<span class="sd">The BBM92 QKD protocol can be seen as a generalization of the famous BB84 protocol.</span>
+<span class="sd">The protocols differ from each other by using entangled photon pairs that are sent</span>
+<span class="sd">to two parties. Due to the entanglement, the measurements give both parties information</span>
+<span class="sd">of each others outcome and allows them to create the key. The exact relation between</span>
+<span class="sd">the measurement results depends on how the entanglement is created. We have an</span>
+<span class="sd">tunable source that lets you modify the expected number of entangled photon pairs.</span>
+<span class="sd">If one party was located at the source and directly measures its quantum state, we</span>
+<span class="sd">effectively have the BB84 protocol again.</span>
+
+
+<span class="sd">We consider two cases</span>
+
+<span class="sd">- Asymptotic Key rate:</span>
+<span class="sd">    The number of pulses is asymptotic and we only have to optimize the intensity of</span>
+<span class="sd">    the source. As we have no decoy-states, we do not have to optimize probabilities</span>
+<span class="sd">    for a measurement basis. For the gain and error-rate computation we include the</span>
+<span class="sd">    link effects for both parties.</span>
+
+<span class="sd">- Finite Key rate:</span>
+<span class="sd">    The number of pulses is finite and chosen by the user. We optimize both the</span>
+<span class="sd">    intensity of the source and the probability of measuring in the X and Z basis.</span>
+<span class="sd">    We take finite-key effects into account by computing bounds on the expected number</span>
+<span class="sd">    of states in a basis and we use security parameters (set as default, but changeable</span>
+<span class="sd">    by the user) to tune the confidence of these bounds.</span>
+
+<span class="sd">Typical usage example:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from tno.quantum.communication.qkd_key_rate.protocols.quantum.bbm92 import (</span>
+<span class="sd">            BBM92AsymptoticKeyRateEstimate,</span>
+<span class="sd">        )</span>
+<span class="sd">        from tno.quantum.communication.qkd_key_rate.test.conftest import standard_detector</span>
+
+<span class="sd">        detector_Alice = standard_detector.customise(</span>
+<span class="sd">            dark_count_rate=1e-8,</span>
+<span class="sd">            polarization_drift=0,</span>
+<span class="sd">            error_detector=0.1,</span>
+<span class="sd">            efficiency_party=1,</span>
+<span class="sd">        )</span>
+<span class="sd">        detector_Bob = standard_detector.customise(</span>
+<span class="sd">            dark_count_rate=1e-8,</span>
+<span class="sd">            polarization_drift=0,</span>
+<span class="sd">            error_detector=0.1,</span>
+<span class="sd">            efficiency_party=1,</span>
+<span class="sd">        )</span>
+
+<span class="sd">        asymptotic_key_rate = BBM92AsymptoticKeyRateEstimate(</span>
+<span class="sd">            detector=detector_Bob, detector_Alice=detector_Alice</span>
+<span class="sd">        )</span>
+
+<span class="sd">        mu, rate = asymptotic_key_rate.optimize_rate(attenuation=0.2)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># pylint: disable=invalid-name</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">from</span> <span class="nn">numpy.typing</span> <span class="kn">import</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">NDArray</span>
+
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.base</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AsymptoticKeyRateEstimate</span><span class="p">,</span>
+    <span class="n">Detector</span><span class="p">,</span>
+    <span class="n">FiniteKeyRateEstimate</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.base.config</span> <span class="kn">import</span> <span class="n">NLP_CONFIG</span>
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.utils</span> <span class="kn">import</span> <span class="n">binary_entropy</span> <span class="k">as</span> <span class="n">h</span>
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.utils</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">one_minus_binary_entropy</span> <span class="k">as</span> <span class="n">one_minus_h</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span>
+    <span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;delta_grad == 0.0. Check if the approximated function is linear.&quot;</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="efficiency_channel"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.efficiency_channel">[docs]</a><span class="k">def</span> <span class="nf">efficiency_channel</span><span class="p">(</span><span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates the efficiency of the channel</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        attenuation: Loss in dB for the channel</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Efficiency channel</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="n">attenuation</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="efficiency_system"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.efficiency_system">[docs]</a><span class="k">def</span> <span class="nf">efficiency_system</span><span class="p">(</span><span class="n">efficiency</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculates the efficiency of the system.</span>
+<span class="sd">    This includes the efficiency of the communication link.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        efficiency: Efficiency of source and detection apparatus</span>
+<span class="sd">        attenuation: Loss in dB for the channel</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Efficiency system</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">efficiency</span> <span class="o">*</span> <span class="n">efficiency_channel</span><span class="p">(</span><span class="n">attenuation</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="compute_gain_and_error_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.compute_gain_and_error_rate">[docs]</a><span class="k">def</span> <span class="nf">compute_gain_and_error_rate</span><span class="p">(</span>
+    <span class="n">detector_alice</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span>
+    <span class="n">detector_bob</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span>
+    <span class="n">attenuation_alice</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">attenuation_bob</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">half_mu</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Computes the total gain and error rate of the channel</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        detector_alice: Alice&#39;s detector</span>
+<span class="sd">        detector_bob: Bob&#39;s detector</span>
+<span class="sd">        attenuation_alice: Attenuation of Alice&#39;s channel</span>
+<span class="sd">        attenuation_bob: Attenuation of Bob&#39;s channel</span>
+<span class="sd">        half_mu: Half of the expected number of photon-pairs</span>
+
+<span class="sd">    Returns:</span>
+
+<span class="sd">        - The overall gain. The probability of a coincident event, given a pump pulse.</span>
+<span class="sd">        - The overall error-rate.</span>
+
+<span class="sd">    Errors can result from incorrect states generated, losses over the channel and</span>
+<span class="sd">    losses at the detector side.</span>
+
+<span class="sd">    - error_background:</span>
+
+<span class="sd">        Error rate related to background errors, with error-rate 1/2</span>
+
+<span class="sd">    - error_detector:</span>
+
+<span class="sd">        Intrinsic detector errors. The probability that a photon hits the erroneous</span>
+<span class="sd">        detector, this error indicates the relative error between the detectors at both sides.</span>
+
+<span class="sd">    The initial states are generated using parametric down conversion (PDC), which gives</span>
+<span class="sd">    the probability</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        P(n) = (n+1) \cdot \lambda^n / [(1+\lambda)^{n+2}],</span>
+
+<span class="sd">    to generate an $n$-photon-pair. The variable $\lambda$ corresponds to half the</span>
+<span class="sd">    expected photon pair number.</span>
+
+<span class="sd">    To compute the losses over the channel, we compute the overall transmittance of the</span>
+<span class="sd">    channel, which is given by</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \eta_n = [1 - (1-\eta_A)^n] \cdot [1 - (1-\eta_B)^n],</span>
+
+<span class="sd">    where:</span>
+
+<span class="sd">        - $\eta_n$: The overall transmittance,</span>
+<span class="sd">        - $\eta_x$: The channel loss of $x$.</span>
+
+<span class="sd">    The probability of a detection event, conditional on an $n$-photon-pair being</span>
+<span class="sd">    emitted is given by the yield:</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        {Yield}_n = [1 - (1-Y_{0A}) \cdot (1-\eta_{A})^n] \cdot</span>
+<span class="sd">        [1 - (1-Y_{0B}) \cdot (1-\eta_{B})^n],</span>
+
+<span class="sd">    where:</span>
+
+<span class="sd">        - $Y_{0x}$: The darkcount rate of $x$.</span>
+
+<span class="sd">    The overall contribution of $n$-photon-pairs to the number of detected events is</span>
+<span class="sd">    given by the product of the yield and probability:</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        Q_n = Y_n \cdot P(n),</span>
+
+<span class="sd">    where:</span>
+
+<span class="sd">        - $Q_n$: The gain of the n-photon-pair.</span>
+
+<span class="sd">    and the overall gain is then given by the sum of these individual gains. The overall</span>
+<span class="sd">    gain corresponds to the probability of a detection event, conditional on a pulse</span>
+<span class="sd">    being sent</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        Q_\lambda = \sum_{n=0}^{\infty} Q_n.</span>
+
+<span class="sd">    From this we compute the quantum bit-error rate (QBER):</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        E_\lambda \cdot Q_\lambda = \sum_{n=0}^{\infty} e_n \cdot Y_n \cdot P(n),</span>
+
+<span class="sd">    where</span>
+
+<span class="sd">        - $e_n$: The error-rate for n-photon-pair states.</span>
+
+<span class="sd">    The functions below compute $Q_{\lambda}$ and $E_{\lambda}$ and return them. We</span>
+<span class="sd">    optimized the implementation of the functions and by that deviated from standard</span>
+<span class="sd">    implementations in literature. Our implementation is equivalent, but gives better</span>
+<span class="sd">    precision in high attenuation cases.</span>
+
+<span class="sd">    Formulas derived from &quot;Quantum key distribution with entangled photon sources&quot;</span>
+<span class="sd">    (doi: `10.1103/PhysRevA.76.012307`_)</span>
+
+<span class="sd">    .. _10.1103/PhysRevA.76.012307: http://doi.org/10.1103/PhysRevA.76.012307</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dark_count_rate_alice</span> <span class="o">=</span> <span class="n">detector_alice</span><span class="o">.</span><span class="n">dark_count_rate</span>
+    <span class="n">dark_count_rate_bob</span> <span class="o">=</span> <span class="n">detector_bob</span><span class="o">.</span><span class="n">dark_count_rate</span>
+    <span class="n">channel_efficiency_alice</span> <span class="o">=</span> <span class="n">efficiency_system</span><span class="p">(</span>
+        <span class="n">detector_alice</span><span class="o">.</span><span class="n">efficiency_party</span><span class="p">,</span> <span class="n">attenuation_alice</span>
+    <span class="p">)</span>
+    <span class="n">channel_efficiency_bob</span> <span class="o">=</span> <span class="n">efficiency_system</span><span class="p">(</span>
+        <span class="n">detector_bob</span><span class="o">.</span><span class="n">efficiency_party</span><span class="p">,</span> <span class="n">attenuation_bob</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Errors from background noise are uniform, thus equal to 0.5</span>
+    <span class="c1"># Errors from the detector depend on the detector</span>
+    <span class="n">error_background</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">detector_alice</span><span class="p">,</span> <span class="s2">&quot;error_detector&quot;</span><span class="p">):</span>
+        <span class="n">error_detector</span> <span class="o">=</span> <span class="n">detector_alice</span><span class="o">.</span><span class="n">error_detector</span>
+    <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">detector_bob</span><span class="p">,</span> <span class="s2">&quot;error_detector&quot;</span><span class="p">):</span>
+        <span class="n">error_detector</span> <span class="o">=</span> <span class="n">detector_bob</span><span class="o">.</span><span class="n">error_detector</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">error_detector</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">a</span> <span class="o">=</span> <span class="n">dark_count_rate_alice</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">dark_count_rate_bob</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">channel_efficiency_alice</span> <span class="o">*</span> <span class="n">half_mu</span>
+    <span class="n">B</span> <span class="o">=</span> <span class="n">channel_efficiency_bob</span> <span class="o">*</span> <span class="n">half_mu</span>
+    <span class="n">C</span> <span class="o">=</span> <span class="n">channel_efficiency_alice</span> <span class="o">*</span> <span class="n">channel_efficiency_bob</span> <span class="o">*</span> <span class="n">half_mu</span>
+    <span class="n">D</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span> <span class="o">-</span> <span class="n">C</span>
+    <span class="c1"># Note that this implementation, though equivalent, differs from literature</span>
+    <span class="c1"># This however gives better results for high attenuations and hence for</span>
+    <span class="c1"># small A, B and C</span>
+    <span class="n">error_rate_denominator</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">A</span> <span class="o">+</span> <span class="n">A</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">D</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">A</span><span class="p">)</span>
+        <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">B</span> <span class="o">+</span> <span class="n">B</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">A</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">D</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span>
+        <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">D</span> <span class="o">-</span> <span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">A</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">B</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">D</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">error_rate_numerator</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="mi">2</span>
+        <span class="o">*</span> <span class="p">(</span><span class="n">error_background</span> <span class="o">-</span> <span class="n">error_detector</span><span class="p">)</span>
+        <span class="o">*</span> <span class="n">channel_efficiency_alice</span>
+        <span class="o">*</span> <span class="n">channel_efficiency_bob</span>
+        <span class="o">*</span> <span class="n">half_mu</span>
+        <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">half_mu</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Computing the overall gain and error rate</span>
+    <span class="n">gain_lambda</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">A</span> <span class="o">+</span> <span class="n">A</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="o">+</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">B</span> <span class="o">+</span> <span class="n">B</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">B</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">-</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">D</span> <span class="o">-</span> <span class="n">D</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">D</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">error_rate_lambda</span> <span class="o">=</span> <span class="n">error_background</span> <span class="o">-</span> <span class="n">error_rate_numerator</span> <span class="o">/</span> <span class="n">error_rate_denominator</span>
+
+    <span class="k">return</span> <span class="n">gain_lambda</span><span class="p">,</span> <span class="n">error_rate_lambda</span></div>
+
+
+<div class="viewcode-block" id="delta"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.delta">[docs]</a><span class="k">def</span> <span class="nf">delta</span><span class="p">(</span><span class="n">N</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">delta_bit</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">e1</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gives the upper bound delta in the finite case.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        N: Number of detection events</span>
+<span class="sd">        delta_bit: Error in the X-basis</span>
+<span class="sd">        e1: Epsilon-security parameter</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Delta</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="o">-</span><span class="n">delta_bit</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">delta_bit</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">e1</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span></div>
+
+
+<div class="viewcode-block" id="BBM92AsymptoticKeyRateEstimate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92AsymptoticKeyRateEstimate">[docs]</a><span class="k">class</span> <span class="nc">BBM92AsymptoticKeyRateEstimate</span><span class="p">(</span><span class="n">AsymptoticKeyRateEstimate</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;BBM92 Asymptotic Key Rate&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BBM92AsymptoticKeyRateEstimate.__init__"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92AsymptoticKeyRateEstimate.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">detector</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span>
+        <span class="n">detector_alice</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Detector</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Class for asymptotic key-rate estimation</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            detector: The detector used at Bob&#39;s side</span>
+<span class="sd">            detector_alice: The detector used at Alice&#39;s side.</span>
+<span class="sd">                default same detector as Bob.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">detector_alice</span> <span class="o">=</span> <span class="n">detector</span> <span class="k">if</span> <span class="n">detector_alice</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">detector_alice</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="BBM92AsymptoticKeyRateEstimate.compute_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92AsymptoticKeyRateEstimate.compute_rate">[docs]</a>    <span class="k">def</span> <span class="nf">compute_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mu</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">],</span> <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the key-rate for a specific intensity and attenuation.</span>
+
+<span class="sd">        Note, the source can be placed anywhere between the two parties. If the</span>
+<span class="sd">        source is placed at one party, we effectively have the BB84 protocol.</span>
+<span class="sd">        The optimal gain is achieved with the source placed in middle between</span>
+<span class="sd">        the two parties.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mu: Intensity</span>
+<span class="sd">            attenuation: Attenuation</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Key-rate</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: When mu is given with invalid dimensions</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">scale_factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">attenuation</span><span class="p">)</span>
+
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">mu</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Multiple intensities were given, only one is expected.&quot;</span><span class="p">)</span>
+
+        <span class="n">gain_lambda</span><span class="p">,</span> <span class="n">error_rate_lambda</span> <span class="o">=</span> <span class="n">compute_gain_and_error_rate</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">detector</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">detector_alice</span><span class="p">,</span> <span class="n">attenuation</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">attenuation</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mu</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="p">)</span>
+
+        <span class="c1"># These are the error rates corresponding to the X and Z basis</span>
+        <span class="c1"># For the asymptotic case, the two are the same</span>
+        <span class="n">delta_bit</span> <span class="o">=</span> <span class="n">error_rate_lambda</span>
+        <span class="n">delta_phase</span> <span class="o">=</span> <span class="n">error_rate_lambda</span>
+
+        <span class="n">key_rate</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">scale_factor</span> <span class="o">*</span> <span class="n">gain_lambda</span> <span class="o">*</span> <span class="p">(</span><span class="n">one_minus_h</span><span class="p">(</span><span class="n">delta_phase</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span><span class="p">(</span><span class="n">delta_bit</span><span class="p">))</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="n">key_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">mu</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">key_rate</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">scale_factor</span></div>
+
+    <span class="k">def</span> <span class="nf">_extract_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<div class="viewcode-block" id="BBM92AsymptoticKeyRateEstimate.optimize_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92AsymptoticKeyRateEstimate.optimize_rate">[docs]</a>    <span class="k">def</span> <span class="nf">optimize_rate</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">x_0</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">],</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Function to optimize the key-rate</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            attenuation: Loss in dB for the channel</span>
+<span class="sd">            x_0: Initial search value, default value [0.5] is chosen.</span>
+<span class="sd">            bounds: Bounds on search range, default [(0.001, 0.5)]</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Optimized intensity and key-rate</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: When x_0 or bounds are given with invalid dimensions.</span>
+<span class="sd">            ValueError: when the found key-rate is negative.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="mf">0.001</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="mf">0.9</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid dimensions input bounds. Expected 1 upper- and lower&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; bound. Received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span><span class="si">}</span><span class="s2"> lower- and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; upper bounds.&quot;</span>
+                <span class="p">)</span>
+        <span class="n">bounds</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">Bounds</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">x_0</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x_0</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid number of inputs. Expected 1 intensity.&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot; Received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span><span class="si">}</span><span class="s2"> intensities.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">x_0</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;attenuation&quot;</span><span class="p">:</span> <span class="n">attenuation</span><span class="p">}</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="p">,</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="o">**</span><span class="n">NLP_CONFIG</span>
+        <span class="p">)</span>
+
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">rate</span> <span class="o">=</span> <span class="o">-</span><span class="n">res</span><span class="o">.</span><span class="n">fun</span>
+        <span class="k">if</span> <span class="n">rate</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Optimization resulted in a negative key rate.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mu</span><span class="p">,</span> <span class="n">rate</span></div></div>
+
+
+<div class="viewcode-block" id="BBM92FiniteKeyRateEstimate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92FiniteKeyRateEstimate">[docs]</a><span class="k">class</span> <span class="nc">BBM92FiniteKeyRateEstimate</span><span class="p">(</span><span class="n">FiniteKeyRateEstimate</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;BBM92 Finite key-rate.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BBM92FiniteKeyRateEstimate.__init__"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92FiniteKeyRateEstimate.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">detector</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span>
+        <span class="n">number_of_pulses</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e12</span><span class="p">,</span>
+        <span class="n">detector_alice</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Detector</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Class for finite key-rate estimation</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            detector: The detector used at Bob&#39;s side</span>
+<span class="sd">            number_of_pulses: Number of pulses sent in total</span>
+<span class="sd">            detector_alice: The detector used at Alice&#39;s side.</span>
+<span class="sd">                default same detector as Bob.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span> <span class="o">=</span> <span class="n">number_of_pulses</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">detector_alice</span> <span class="o">=</span> <span class="n">detector</span> <span class="k">if</span> <span class="n">detector_alice</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">detector_alice</span></div>
+
+<div class="viewcode-block" id="BBM92FiniteKeyRateEstimate.compute_last_positive_distance"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92FiniteKeyRateEstimate.compute_last_positive_distance">[docs]</a>    <span class="k">def</span> <span class="nf">compute_last_positive_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes the last positive distance.</span>
+
+<span class="sd">        The optimization routine sometimes considers a parameter setting</span>
+<span class="sd">        outside of the valid region. This function is used to push the</span>
+<span class="sd">        parameters back to the valid regime.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span></div>
+
+<div class="viewcode-block" id="BBM92FiniteKeyRateEstimate.compute_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92FiniteKeyRateEstimate.compute_rate">[docs]</a>    <span class="k">def</span> <span class="nf">compute_rate</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">mu</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">],</span>
+        <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">probability_basis_X</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">probability_basis_Z</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">n_X</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the key-rate for a specific set of variables</span>
+
+<span class="sd">        Note, the source can be placed anywhere between the two parties. If the</span>
+<span class="sd">        source is placed at one party, we effectively have the BB84 protocol.</span>
+<span class="sd">        The optimal gain is achieved with the source placed in middle between</span>
+<span class="sd">        the two parties.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mu: Used intensities</span>
+<span class="sd">            attenuation: Attenuation of the channel</span>
+<span class="sd">            probability_basis_X: Probabilities for each intensity in X-basis</span>
+<span class="sd">            probability_basis_Z: Probabilities for each intensity in Z-basis</span>
+<span class="sd">            n_X: Number of pulses in the X-basis</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            key-rate</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: When mu is given with invalid dimensions</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">scale_factor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">attenuation</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">mu</span><span class="o">.</span><span class="n">shape</span> <span class="o">!=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Multiple intensities were given, only one is expected.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Two security parameters to be used</span>
+        <span class="n">p_abort</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**-</span><span class="mi">50</span>
+        <span class="n">epsilon_1</span> <span class="o">=</span> <span class="mf">1e-12</span>
+
+        <span class="c1"># Make sure the variables are within a valid range</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">mu</span><span class="p">,</span> <span class="n">probability_basis_X</span><span class="p">,</span> <span class="n">probability_basis_Z</span><span class="p">))</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="ow">or</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span>
+            <span class="ow">or</span> <span class="p">(</span><span class="n">probability_basis_X</span> <span class="o">+</span> <span class="n">probability_basis_Z</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_last_positive_distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">gain_lambda</span><span class="p">,</span> <span class="n">error_rate_lambda</span> <span class="o">=</span> <span class="n">compute_gain_and_error_rate</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">detector</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">detector_alice</span><span class="p">,</span>
+            <span class="n">attenuation</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="n">attenuation</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nb">float</span><span class="p">(</span><span class="n">mu</span> <span class="o">/</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Compute the number of pulses in the X basis. The Z-basis follows</span>
+        <span class="n">n_X_observed</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">gain_lambda</span> <span class="o">*</span> <span class="n">probability_basis_X</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span>
+            <span class="k">if</span> <span class="n">n_X</span> <span class="ow">is</span> <span class="kc">None</span>
+            <span class="k">else</span> <span class="n">n_X</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Check if the number of pulses in the X basis is positive</span>
+        <span class="k">if</span> <span class="n">n_X_observed</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_last_positive_distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># These are the error rates corresponding to the X and Z basis</span>
+        <span class="c1"># A bound is used for delta_phase (Z) errors</span>
+        <span class="n">delta_bit</span> <span class="o">=</span> <span class="n">error_rate_lambda</span>
+        <span class="n">delta_phase</span> <span class="o">=</span> <span class="n">error_rate_lambda</span> <span class="o">+</span> <span class="n">delta</span><span class="p">(</span>
+            <span class="n">gain_lambda</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span><span class="p">,</span> <span class="n">delta_bit</span><span class="p">,</span> <span class="n">epsilon_1</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Only the pulses in the X-basis are used to get key-material</span>
+        <span class="n">usable_pulses_lp</span> <span class="o">=</span> <span class="n">n_X_observed</span> <span class="o">*</span> <span class="p">(</span><span class="n">one_minus_h</span><span class="p">(</span><span class="n">delta_phase</span><span class="p">)</span> <span class="o">-</span> <span class="n">h</span><span class="p">(</span><span class="n">delta_bit</span><span class="p">))</span>
+        <span class="n">key_rate</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">scale_factor</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p_abort</span><span class="p">)</span> <span class="o">*</span> <span class="n">usable_pulses_lp</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="n">key_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span></div>
+
+    <span class="k">def</span> <span class="nf">_extract_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Extract the parameters and assigns them correspondingly.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">probability_basis_X</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">probability_basis_Z</span><span class="o">=</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<div class="viewcode-block" id="BBM92FiniteKeyRateEstimate.optimize_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html#qkd_key_rate.protocols.quantum.BBM92FiniteKeyRateEstimate.optimize_rate">[docs]</a>    <span class="k">def</span> <span class="nf">optimize_rate</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">x_0</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">],</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Function to optimize the key-rate</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            attenuation: Loss in dB for the channel</span>
+<span class="sd">            x_0: Initial search value</span>
+<span class="sd">            bounds: Bounds on search range</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            Optimized x=[intensity, probability_basis_X, probability_basis_Z]</span>
+<span class="sd">            and found optimal key-rate</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: when x_0 or bounds are given with invalid dimensions.</span>
+<span class="sd">            ValueError: when the found key-rate is negative.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid dimensions input bounds. Expected 3 upper- and lower&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; bound. Received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span><span class="si">}</span><span class="s2"> lower- and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; upper bounds.&quot;</span>
+                <span class="p">)</span>
+
+        <span class="n">bounds</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">Bounds</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">x_0</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x_0</span> <span class="o">=</span> <span class="p">(</span><span class="n">lower_bound</span> <span class="o">+</span> <span class="n">upper_bound</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">x_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x_0</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid number of inputs. Expected 3 inputs.&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;Received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span><span class="si">}</span><span class="s2"> inputs.&quot;</span>
+            <span class="p">)</span>
+        <span class="c1"># The probabilities are normalized to 1</span>
+        <span class="n">x_0</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">/=</span> <span class="n">x_0</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">x_0</span>
+
+        <span class="n">bounds</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">Bounds</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+        <span class="c1"># This forces the probabilities to sum to one</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">constraint</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">LinearConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;attenuation&quot;</span><span class="p">:</span> <span class="n">attenuation</span><span class="p">}</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="p">,</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">constraints</span><span class="o">=</span><span class="n">constraint</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="o">**</span><span class="n">NLP_CONFIG</span>
+        <span class="p">)</span>
+
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">rate</span> <span class="o">=</span> <span class="o">-</span><span class="n">res</span><span class="o">.</span><span class="n">fun</span>
+        <span class="k">if</span> <span class="n">rate</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Optimization resulted in a negative key rate.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mu</span><span class="p">,</span> <span class="n">rate</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2023, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

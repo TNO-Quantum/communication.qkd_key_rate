@@ -1,0 +1,131 @@
+.. tno.quantum.communication.qkd_key_rate documentation master file, created by
+   sphinx-quickstart on Tue Jul  4 15:41:57 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+
+TNO Quantum
+===========
+TNO Quantum provides generic software components aimed at facilitating the development
+of quantum applications.
+
+TNO Quantum - Communication - QKD Key Rate
+==========================================
+
+This repository provides python code to compute optimal protocol parameters for different quantum key distribution (QKD) protocols.
+
+The codebase is based on the following TNO papers:
+
+- Attema et al. - Optimizing the decoy-state BB84 QKD protocol parameters (2021) (doi: `10.1007/s11128-021-03078-0`_)
+- Ma et al. - Quantum key distribution with entangled photon sources (2007) (doi: `10.1103/PhysRevA.76.012307`_)
+
+
+.. _10.1007/s11128-021-03078-0: https://doi.org/10.1007/s11128-021-03078-0
+.. _10.1103/PhysRevA.76.012307: http://doi.org/10.1103/PhysRevA.76.012307
+
+
+The following quantum protocols are being supported:
+
+- BB84 protocol (:py:mod:`~qkd_key_rate.protocols.quantum.bb84`),
+- BB84 protocol using a single photon source (:py:mod:`~qkd_key_rate.protocols.quantum.bb84_single_photon`),
+- BBM92 protocol (:py:mod:`~qkd_key_rate.protocols.quantum.bbm92`).
+
+The following classical error-correction protocols are being supported:
+
+- Cascade (:py:mod:`~qkd_key_rate.protocols.classical.cascade`),
+- Winnow (:py:mod:`~qkd_key_rate.protocols.classical.winnow`).
+
+The presented code can be used to
+
+- determine optimal parameter settings needed to obtain the maximum key rate, 
+- correct errors in exchanged sifted keys for the different QKD protocols,
+- apply privacy amplification by calculating secure key using hash function. 
+
+
+Quick Install
+-------------
+
+The QKD Key Rate module can easily be installed using pip as follows::
+
+    pip install tno.quantum.communication.qkd_key_rate
+
+Examples
+--------
+The following code demonstrates how the :py:mod:`~qkd_key_rate.protocols.quantum.bb84` protocol can
+be used to calculate optimal key-rate for a specific detector with `attenuation=0.2`.
+
+.. code-block:: python
+
+   from tno.quantum.communication.qkd_key_rate.protocols.quantum.bb84 import (
+      BB84FullyAsymptoticKeyRateEstimate,
+   )
+   from tno.quantum.communication.qkd_key_rate.test.conftest import standard_detector
+
+   detector_Bob = standard_detector.customise(
+      dark_count_rate=1e-8,
+      polarization_drift=0,
+      error_detector=0.1,
+      efficiency_party=1,
+   )
+
+   fully_asymptotic_key_rate = BB84FullyAsymptoticKeyRateEstimate(detector=detector_Bob)
+   mu, rate = fully_asymptotic_key_rate.optimize_rate(attenuation=0.2)
+
+The following example demonstrates usage of the
+:py:mod:`~qkd_key_rate.protocols.classical.winnow` error correction protocol.
+
+.. code-block:: python
+   
+   import numpy as np
+
+   from tno.quantum.communication.qkd_key_rate.base import Message, Permutations, Schedule
+   from tno.quantum.communication.qkd_key_rate.protocols.classical.winnow import (
+      WinnowCorrector,
+      WinnowReceiver,
+      WinnowSender,
+   )
+
+   error_rate = 0.05
+   message_length = 10000
+   input_message = Message.random_message(message_length=message_length)
+   error_message = Message(
+      [x if np.random.rand() > error_rate else 1 - x for x in input_message]
+   )
+   schedule = Schedule.schedule_from_error_rate(error_rate=error_rate)
+   number_of_passes = np.sum(schedule.schedule)
+   permutations = Permutations.random_permutation(
+      number_of_passes=number_of_passes, message_size=message_length
+   )
+
+   alice = WinnowSender(
+      message=input_message, permutations=permutations, schedule=schedule
+   )
+   bob = WinnowReceiver(
+      message=error_message, permutations=permutations, schedule=schedule
+   )
+   corrector = WinnowCorrector(alice=alice, bob=bob)
+   summary = corrector.correct_errors()
+
+
+For more usage examples see the the documentation of the individual modules
+
+   - :py:mod:`qkd_key_rate.protocols.quantum.bb84`
+   - :py:mod:`qkd_key_rate.protocols.quantum.bb84_single_photon`
+   - :py:mod:`qkd_key_rate.protocols.quantum.bbm92`
+   - :py:mod:`qkd_key_rate.protocols.classical.cascade`
+   - :py:mod:`qkd_key_rate.protocols.classical.winnow`
+   - :py:mod:`qkd_key_rate.protocols.classical.privacy_amplification`
+
+
+.. toctree::
+   :maxdepth: 4
+   :caption: Contents:
+   :hidden:
+
+   qkd_key_rate
+
+
+
+(End)use Limitations
+--------------------
+The content of this software may solely be used for applications that comply with international export control laws.

@@ -1,0 +1,7 @@
+qkd\_key\_rate.base.keyrate module
+==================================
+
+.. automodule:: qkd_key_rate.base.keyrate
+   :members:
+   :undoc-members:
+   :show-inheritance:

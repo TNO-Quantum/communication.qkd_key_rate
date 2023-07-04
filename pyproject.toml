@@ -1,0 +1,40 @@
+[build-system]
+requires = [ "setuptools >= 68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+known_tno= "tno"
+sections= ["FUTURE", "STDLIB", "THIRDPARTY", "TNO", "FIRSTPARTY", "LOCALFOLDER"]
+no_lines_before="LOCALFOLDER"
+
+[tool.mypy]
+plugins = ["numpy.typing.mypy_plugin"]
+strict = true
+show_error_context = true
+install_types = true
+explicit_package_bases=true
+namespace_packages=true
+show_error_codes=true
+ignore_missing_imports=true
+
+[tool.pylint."TYPECHECK"]
+generated-members = ["torch.*", "numpy.*"]
+
+[tool.tbump]
+
+[tool.tbump.version]
+current = "1.0.0"
+regex = '''
+\d+\.\d+\.\d+(-(.*))?
+'''
+
+[tool.tbump.git]
+message_template = "Bump to {new_version}"
+tag_template = "v{new_version}"
+
+[[tool.tbump.file]]
+src = "pyproject.toml"
+
+[[tool.tbump.file]]
+src = "tno/quantum/communication/qkd_key_rate/__init__.py"

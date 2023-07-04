@@ -1,0 +1,2 @@
+name;efficiency_detector;jitter_source;jitter_detector;dead_time;dark_count_frequency;detection_frequency;detection_window;efficiency_system;interval;dark_count_rate;efficiency_party;polarization_drift;error_detector
+standard;0.2;0;5.00E-11;4.50E-08;100;1.00E+07;5;1;;;;;

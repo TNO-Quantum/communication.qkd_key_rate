@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qkd_key_rate.protocols.quantum.bb84 &mdash; tno.quantum.communication.qkd_key_rate</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            tno.quantum.communication.qkd_key_rate
+              <img src="../../../../_static/TNO_wit.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../qkd_key_rate.html">qkd_key_rate package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qkd_key_rate.base.html">qkd_key_rate.base package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.config.html">qkd_key_rate.base.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.corrector.html">qkd_key_rate.base.corrector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.detector.html">qkd_key_rate.base.detector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.keyrate.html">qkd_key_rate.base.keyrate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.message.html">qkd_key_rate.base.message module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.parity_strategy.html">qkd_key_rate.base.parity_strategy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.permutations.html">qkd_key_rate.base.permutations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.receiver.html">qkd_key_rate.base.receiver module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.schedule.html">qkd_key_rate.base.schedule module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.base.sender.html">qkd_key_rate.base.sender module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qkd_key_rate.protocols.html">qkd_key_rate.protocols package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.html">qkd_key_rate.protocols.classical package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.cascade.html">qkd_key_rate.protocols.classical.cascade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.privacy_amplification.html">qkd_key_rate.protocols.classical.privacy_amplification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.classical.winnow.html">qkd_key_rate.protocols.classical.winnow module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.html">qkd_key_rate.protocols.quantum package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.bb84.html">qkd_key_rate.protocols.quantum.bb84 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.bb84_single_photon.html">qkd_key_rate.protocols.quantum.bb84_single_photon module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../qkd_key_rate.protocols.quantum.bbm92.html">qkd_key_rate.protocols.quantum.bbm92 module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../qkd_key_rate.utils.html">qkd_key_rate.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.utils.entropy.html">qkd_key_rate.utils.entropy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../qkd_key_rate.utils.required_linktime.html">qkd_key_rate.utils.required_linktime module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">tno.quantum.communication.qkd_key_rate</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">qkd_key_rate.protocols.quantum.bb84</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for qkd_key_rate.protocols.quantum.bb84</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Classes to perform key error rate estimate for the BB84 QKD protocol.</span>
+
+<span class="sd">This code is based on TNO&#39;s BB84 key-rate paper (doi: `10.1007/s11128-021-03078-0`_):</span>
+
+<span class="sd">.. _10.1007/s11128-021-03078-0: https://doi.org/10.1007/s11128-021-03078-0</span>
+
+<span class="sd">Quantum Key Distribution (QKD) protocols rely on an entangled photon source that</span>
+<span class="sd">produces entangled photon pairs, which are distributed over two parties. Both parties</span>
+<span class="sd">randomly choose one of two predefined measurement bases. As the photons are entangled,</span>
+<span class="sd">non-random results will only be obtained for specific combinations of basis choices.</span>
+<span class="sd">Detection events are sifted, where only the detection events corresponding to events</span>
+<span class="sd">where both parties measured in an appropriate basis should be kept. Part of the</span>
+<span class="sd">resulting sifted key is made public which can be used to estimate the key error rate.</span>
+
+<span class="sd">The famous BB84 protocol by Charles Bennett and Gilles Brassard for establishing a</span>
+<span class="sd">secure key between two parties, usually called Alice and Bob. Alice prepares a quantum</span>
+<span class="sd">state in one of four ways, and Bob measures the quantum state in one of two ways. Based</span>
+<span class="sd">on the way of measuring alone, both Alice and Bob can establish a key (assuming</span>
+<span class="sd">noiseless operations). Classical post-processing routines can correct potential errors</span>
+<span class="sd">still occurring and can detect eavesdroppers.</span>
+
+<span class="sd">We consider three cases:</span>
+
+<span class="sd">- Fully Asymptotic Key Rate</span>
+<span class="sd">    Both the number of pulses and the number of used decoy states is infinite. Because</span>
+<span class="sd">    of the asymptotic number of pulses and decoy states, we can simplify the</span>
+<span class="sd">    computations and instead work with a single intensity setting which we vary.</span>
+
+<span class="sd">- Asymptotic Key Rate</span>
+<span class="sd">    Only the number of pulses is asymptotic, the number of decoy states is finite and</span>
+<span class="sd">    chosen by the user. We have to optimize the probabilities for the X- and Z-basis</span>
+<span class="sd">    for each intensity setting. So with two additional decoy states, we have three</span>
+<span class="sd">    intensity settings to optimize and six probabilities in total. We use linear</span>
+<span class="sd">    programs (LPs) for this.</span>
+
+<span class="sd">- Finite Key Rate:</span>
+<span class="sd">    Both the number of pulses and the number of decoy states is finite and chosen by</span>
+<span class="sd">    the user. The approach is similar to the asymptotic key rate module, however we</span>
+<span class="sd">    have to take finite-key effects into account. We compute bounds on the effect of</span>
+<span class="sd">    the finite key size and we use security parameters to impose a degree of certainty</span>
+<span class="sd">    of these bounds.</span>
+
+
+<span class="sd">Typical usage example:</span>
+
+<span class="sd">    .. code-block:: python</span>
+
+<span class="sd">        from tno.quantum.communication.qkd_key_rate.protocols.quantum.bb84 import (</span>
+<span class="sd">            BB84FullyAsymptoticKeyRateEstimate,</span>
+<span class="sd">        )</span>
+<span class="sd">        from tno.quantum.communication.qkd_key_rate.test.conftest import standard_detector</span>
+
+<span class="sd">        detector_Bob = standard_detector.customise(</span>
+<span class="sd">            dark_count_rate=1e-8,</span>
+<span class="sd">            polarization_drift=0,</span>
+<span class="sd">            error_detector=0.1,</span>
+<span class="sd">            efficiency_party=1,</span>
+<span class="sd">        )</span>
+
+<span class="sd">        fully_asymptotic_key_rate = BB84FullyAsymptoticKeyRateEstimate(detector=detector_Bob)</span>
+<span class="sd">        mu, rate = fully_asymptotic_key_rate.optimize_rate(attenuation=0.2)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1"># pylint: disable=invalid-name</span>
+<span class="c1"># pylint: disable=too-many-lines</span>
+
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span>
+<span class="kn">from</span> <span class="nn">numpy.typing</span> <span class="kn">import</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">NDArray</span>
+
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.base</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AsymptoticKeyRateEstimate</span><span class="p">,</span>
+    <span class="n">Detector</span><span class="p">,</span>
+    <span class="n">FiniteKeyRateEstimate</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.base.config</span> <span class="kn">import</span> <span class="n">LP_CONFIG</span><span class="p">,</span> <span class="n">NLP_CONFIG</span>
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.utils</span> <span class="kn">import</span> <span class="n">binary_entropy</span> <span class="k">as</span> <span class="n">h</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span>
+    <span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;delta_grad == 0.0. Check if the approximated function is linear.&quot;</span>
+<span class="p">)</span>
+
+
+<div class="viewcode-block" id="OptimizationError"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.OptimizationError">[docs]</a><span class="k">class</span> <span class="nc">OptimizationError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Raised when optimization is unsuccessful.</span>
+<span class="sd">    This error typically thrown when the lp problem is infeasible.&quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ensure_probability"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.ensure_probability">[docs]</a><span class="k">def</span> <span class="nf">ensure_probability</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Ensure that we have a probability between zero and one.</span>
+<span class="sd">    Other functions will otherwise throw an error.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        p: Probability to be mapped to range $[0, 1]$.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Probability</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="compute_gain_and_error_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.compute_gain_and_error_rate">[docs]</a><span class="k">def</span> <span class="nf">compute_gain_and_error_rate</span><span class="p">(</span>
+    <span class="n">detector</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span> <span class="n">mu</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span> <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">],</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes the total gain and error rate of the channel</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        detector: The used detector on Bob&#39;s side</span>
+<span class="sd">        mu: Intensities of the laser</span>
+<span class="sd">        attenuation: Loss of the channel</span>
+
+<span class="sd">    Returns:</span>
+
+<span class="sd">        - The gain per intensity. The probability of an event, given a pulse.</span>
+<span class="sd">        - The error rate per intensity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">dark_count_rate</span> <span class="o">=</span> <span class="n">detector</span><span class="o">.</span><span class="n">dark_count_rate</span>
+    <span class="n">efficiency_bob</span> <span class="o">=</span> <span class="n">detector</span><span class="o">.</span><span class="n">efficiency_party</span>
+    <span class="n">polarization_drift</span> <span class="o">=</span> <span class="n">detector</span><span class="o">.</span><span class="n">polarization_drift</span>
+
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+
+    <span class="n">efficiency_channel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="n">attenuation</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">coefficient</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">efficiency_bob</span> <span class="o">*</span> <span class="n">efficiency_channel</span>
+
+    <span class="c1"># Compute the overall gain and error rate.</span>
+    <span class="c1"># For stability and accuracy reasons, the error_rate is computed in two steps</span>
+    <span class="n">gain</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">dark_count_rate</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">coefficient</span><span class="p">)</span>
+    <span class="n">error_rate_denominator</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">gain</span>
+    <span class="n">error_rate_numerator</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="mi">1</span>
+        <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">dark_count_rate</span><span class="p">)</span>
+        <span class="o">*</span> <span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">coefficient</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">polarization_drift</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+            <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">coefficient</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">polarization_drift</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">coefficient</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">dark_count_rate</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">error_rate</span> <span class="o">=</span> <span class="n">error_rate_numerator</span> <span class="o">/</span> <span class="n">error_rate_denominator</span>
+    <span class="n">error_rate</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">error_rate</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">gain</span><span class="p">,</span> <span class="n">error_rate</span></div>
+
+
+<div class="viewcode-block" id="lower_bound_matrix_gain"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.lower_bound_matrix_gain">[docs]</a><span class="k">def</span> <span class="nf">lower_bound_matrix_gain</span><span class="p">(</span><span class="n">max_num_photons</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">mus</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes a lower bound on the likeliness of the number of photons per intensity</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        max_num_photons: Maximum on the number of photons per pulse to consider</span>
+<span class="sd">        mus: All used intensities</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mus</span><span class="p">)</span>
+    <span class="n">i</span><span class="p">,</span> <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">mus</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="bound_f"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.bound_f">[docs]</a><span class="k">def</span> <span class="nf">bound_f</span><span class="p">(</span><span class="n">number_of_pulses</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">probability</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes a bound used in the finite key-rate computations.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        number_of_pulses: Number of pulses considered</span>
+<span class="sd">        probability: Probability of the event for which the bound-term is computed</span>
+<span class="sd">        epsilon: Security-parameter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">epsilon</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span>
+        <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">probability</span> <span class="o">*</span> <span class="n">number_of_pulses</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">epsilon</span><span class="p">))</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="delta"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.delta">[docs]</a><span class="k">def</span> <span class="nf">delta</span><span class="p">(</span><span class="n">n_x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">n_z</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">e1</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes a bound based on the number of pulses sent in both bases and</span>
+<span class="sd">    an epsilon-security value.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        n_x: Number of pulses in the X-basis</span>
+<span class="sd">        n_z: Number of pulses in the Z-basis</span>
+<span class="sd">        e1: Epsilon-security parameter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="o">-</span><span class="p">(</span><span class="n">n_x</span> <span class="o">+</span> <span class="n">n_z</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">n_x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">e1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">n_z</span> <span class="o">*</span> <span class="n">n_x</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="delta_ec"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.delta_ec">[docs]</a><span class="k">def</span> <span class="nf">delta_ec</span><span class="p">(</span><span class="n">p_abort</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n_x</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes a bound on the losses due to error correction.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        p_abort: Abort probability, used if there are too many errors</span>
+<span class="sd">        n_x: Number of pulses in the X-basis</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span> <span class="o">/</span> <span class="n">p_abort</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">n_x</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="solve_lp"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.solve_lp">[docs]</a><span class="k">def</span> <span class="nf">solve_lp</span><span class="p">(</span>
+    <span class="n">target_vacuum</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">target_single</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">mu</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">]],</span>
+    <span class="n">program_coefficients</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">],</span>
+    <span class="n">max_num_photons</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">OptimizeResult</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Solves the linear program (LP) for the asymptotic case.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        target_vacuum: Coefficient for the vacuum state term</span>
+<span class="sd">        target_single: Coefficient for the single photon state terms</span>
+<span class="sd">        mu: The used intensity</span>
+<span class="sd">        program_coefficients: The coefficients in the LP, e.g., gain,</span>
+<span class="sd">            error-rate or their product</span>
+<span class="sd">        max_num_photons: The number of photons at which the sums are cut</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        OptimizationError in case no solution was found for the LP.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">program_coefficients</span><span class="p">)</span>
+
+    <span class="c1"># Determine the LP-constraints</span>
+    <span class="n">Lb</span> <span class="o">=</span> <span class="n">lower_bound_matrix_gain</span><span class="p">(</span><span class="n">max_num_photons</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+    <span class="n">Uv</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">Lb</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">target_vacuum</span><span class="p">,</span> <span class="n">target_single</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))),</span>
+        <span class="n">A_ub</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">Lb</span><span class="p">,</span> <span class="o">-</span><span class="n">Lb</span><span class="p">)),</span>
+        <span class="n">b_ub</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">program_coefficients</span><span class="p">,</span> <span class="o">-</span><span class="n">program_coefficients</span> <span class="o">+</span> <span class="n">Uv</span><span class="p">)),</span>
+        <span class="n">bounds</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Optimize the LP</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">linprog</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">LP_CONFIG</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">OptimizationError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;No solution was found for the linear problem. </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="solve_finite_lp"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.solve_finite_lp">[docs]</a><span class="k">def</span> <span class="nf">solve_finite_lp</span><span class="p">(</span>
+    <span class="n">target_vacuum</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">target_single</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+    <span class="n">probabilities_intensity_j</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">ArrayLike</span><span class="p">],</span>
+    <span class="n">mu</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">ArrayLike</span><span class="p">],</span>
+    <span class="n">max_num_photons</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">number_of_pulses</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">observed_count</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+    <span class="n">epsilon_mu_j</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">ArrayLike</span><span class="p">],</span>
+    <span class="n">epsilon_num_photons_M</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">ArrayLike</span><span class="p">],</span>
+    <span class="n">epsilon_num_photons_M_in_basis_B</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">ArrayLike</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">OptimizeResult</span><span class="p">:</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Solves the linear program (LP) for the finite case.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        target_vacuum: Coefficient for the vacuum state term</span>
+<span class="sd">        target_single: Coefficient for the single photon state terms</span>
+<span class="sd">        probabilities_intensity_j: Probability for each decoy state</span>
+<span class="sd">        mu: The used intensity</span>
+<span class="sd">        max_num_photons: The number of photons at which the sums are cut</span>
+<span class="sd">        number_of_pulses: Number of pulses sent in specific basis</span>
+<span class="sd">        observed_count: Number of pulses observed in specific basis per intensity</span>
+<span class="sd">        epsilon_mu_j: Epsilon terms for the intensities</span>
+<span class="sd">        epsilon_num_photons_M: Epsilon terms for the number of photons</span>
+<span class="sd">        epsilon_num_photons_M_in_basis_B: Epsilon terms for the</span>
+<span class="sd">            number of photons in basis B</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Number of usable pulses</span>
+
+<span class="sd">    The variables in the LP are</span>
+<span class="sd">        - $n_0$: Number of vacuum pulses</span>
+<span class="sd">        - $n_1$: Number of single photon pulses</span>
+<span class="sd">        - $\ldots$</span>
+<span class="sd">        - $n_M$: Number of pulses with M pulses</span>
+<span class="sd">        - $\delta_{j,1}$:  Deviation for intensity 1</span>
+<span class="sd">        - $\delta_{j,2}$:  Deviation for intensity 2</span>
+<span class="sd">        - $\ldots$</span>
+<span class="sd">        - $\delta_{j,m}$:  Deviation for intensity m</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Total number of events observed</span>
+    <span class="n">observed_count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">observed_count</span><span class="p">)</span>
+    <span class="n">observed_total</span> <span class="o">=</span> <span class="n">observed_count</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+    <span class="c1"># Compute the probability to have an $m$ photon state, given you use intensity $j$</span>
+    <span class="n">probability_m_photon_state_given_intensity_j</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span>
+        <span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">mu</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="c1"># And compute the probability to have an $m$ photon state at all</span>
+    <span class="c1"># (independent on the used intensity)</span>
+    <span class="n">probability_m_photon_state</span> <span class="o">=</span> <span class="n">probabilities_intensity_j</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span>
+        <span class="n">probability_m_photon_state_given_intensity_j</span>
+    <span class="p">)</span>
+    <span class="n">probability_m_photon_state</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">probability_m_photon_state</span><span class="p">,</span> <span class="mf">1e-150</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Similarly, compute the other conditional probabilities:</span>
+    <span class="c1"># The probability to have intensity $j$, given that you send an $m$ photon state</span>
+    <span class="n">probability_intensity_j_given_m_photon_state</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">probability_m_photon_state_given_intensity_j</span>
+        <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">outer</span><span class="p">(</span><span class="n">probabilities_intensity_j</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">probability_m_photon_state</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">number_of_intensities</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+    <span class="c1"># Compute the probability that a photon state is send out with more than</span>
+    <span class="c1"># the defined maximum number of photons.</span>
+    <span class="n">tail_probability_maximum_photons</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">sf</span><span class="p">(</span>
+        <span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">mu</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">probabilities_intensity_j</span><span class="p">)</span>
+
+    <span class="c1"># Bound on the contribution for the number of photons above the cut</span>
+    <span class="n">lambda_num_photons_cut</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">tail_probability_maximum_photons</span> <span class="o">*</span> <span class="n">number_of_pulses</span>
+        <span class="o">+</span> <span class="n">bound_f</span><span class="p">(</span>
+            <span class="n">number_of_pulses</span><span class="p">,</span>
+            <span class="n">tail_probability_maximum_photons</span><span class="p">,</span>
+            <span class="n">epsilon_num_photons_M_in_basis_B</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Below, constraints are defined. The first two letters of the variables</span>
+    <span class="c1"># define the type of constraint: lb = lower bound, ub = upper bound, eq = equality</span>
+    <span class="c1"># Constraints on the number of $m$ photon states per intensity $j$</span>
+    <span class="n">lb_num_photons_m_given_intensity_j_lhs</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">probability_intensity_j_given_m_photon_state</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">number_of_intensities</span><span class="p">))</span>
+    <span class="p">)</span>
+    <span class="n">lb_num_photons_m_given_intensity_j_rhs</span> <span class="o">=</span> <span class="o">-</span><span class="n">observed_count</span>
+    <span class="n">ub_num_photons_m_given_intensity_j_lhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">probability_intensity_j_given_m_photon_state</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">number_of_intensities</span><span class="p">))</span>
+    <span class="p">)</span>
+    <span class="n">ub_num_photons_m_given_intensity_j_rhs</span> <span class="o">=</span> <span class="n">observed_count</span> <span class="o">+</span> <span class="n">lambda_num_photons_cut</span>
+
+    <span class="c1"># Constraints on the number of $m$ photon states</span>
+    <span class="n">lb_num_photons_m_lhs</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span>
+        <span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">max_num_photons</span> <span class="o">+</span> <span class="n">number_of_intensities</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">)</span>
+    <span class="n">lb_num_photons_m_rhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">ub_num_photons_m_lhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span>
+        <span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">max_num_photons</span> <span class="o">+</span> <span class="n">number_of_intensities</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">)</span>
+    <span class="n">ub_num_photons_m_rhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">probability_m_photon_state</span> <span class="o">*</span> <span class="n">number_of_pulses</span>
+            <span class="o">+</span> <span class="n">bound_f</span><span class="p">(</span>
+                <span class="n">number_of_pulses</span><span class="p">,</span>
+                <span class="n">probability_m_photon_state</span><span class="p">,</span>
+                <span class="n">epsilon_num_photons_M</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="o">*</span> <span class="n">number_of_pulses</span>
+        <span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">observed_total</span><span class="p">,</span> <span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Constraints on the states where intensity $j$ is used</span>
+    <span class="n">intensity_j_rhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">epsilon_mu_j</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">observed_total</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">intensity_j_lhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span>
+        <span class="n">number_of_intensities</span><span class="p">,</span>
+        <span class="n">max_num_photons</span> <span class="o">+</span> <span class="n">number_of_intensities</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">lb_intensity_j_rhs</span> <span class="o">=</span> <span class="n">intensity_j_rhs</span>
+    <span class="n">ub_intensity_j_rhs</span> <span class="o">=</span> <span class="n">intensity_j_rhs</span>
+    <span class="n">lb_intensity_j_lhs</span> <span class="o">=</span> <span class="n">intensity_j_lhs</span>
+    <span class="n">ub_intensity_j_lhs</span> <span class="o">=</span> <span class="o">-</span><span class="n">intensity_j_lhs</span>
+
+    <span class="c1"># Constraint that the states per intensity should together sum to the observed count</span>
+    <span class="n">eq_sum_of_intensities_j_lhs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">number_of_intensities</span><span class="p">))</span>
+    <span class="p">)</span>
+    <span class="n">eq_sum_of_intensities_j_rhs</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">target_vacuum</span><span class="p">,</span>
+                <span class="n">target_single</span><span class="p">,</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_num_photons</span> <span class="o">+</span> <span class="n">number_of_intensities</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">A_ub</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">lb_num_photons_m_given_intensity_j_lhs</span><span class="p">,</span>
+                <span class="n">ub_num_photons_m_given_intensity_j_lhs</span><span class="p">,</span>
+                <span class="n">lb_num_photons_m_lhs</span><span class="p">,</span>
+                <span class="n">ub_num_photons_m_lhs</span><span class="p">,</span>
+                <span class="n">lb_intensity_j_lhs</span><span class="p">,</span>
+                <span class="n">ub_intensity_j_lhs</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">b_ub</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">lb_num_photons_m_given_intensity_j_rhs</span><span class="p">,</span>
+                <span class="n">ub_num_photons_m_given_intensity_j_rhs</span><span class="p">,</span>
+                <span class="n">lb_num_photons_m_rhs</span><span class="p">,</span>
+                <span class="n">ub_num_photons_m_rhs</span><span class="p">,</span>
+                <span class="n">lb_intensity_j_rhs</span><span class="p">,</span>
+                <span class="n">ub_intensity_j_rhs</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="o">/</span> <span class="n">number_of_pulses</span><span class="p">,</span>
+        <span class="n">A_eq</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">eq_sum_of_intensities_j_lhs</span><span class="p">),</span>
+        <span class="n">b_eq</span><span class="o">=</span><span class="n">eq_sum_of_intensities_j_rhs</span> <span class="o">/</span> <span class="n">number_of_pulses</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">linprog</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">LP_CONFIG</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">status</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="n">OptimizationError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;No solution was found for the linear problem. </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+<div class="viewcode-block" id="BB84FullyAsymptoticKeyRateEstimate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FullyAsymptoticKeyRateEstimate">[docs]</a><span class="k">class</span> <span class="nc">BB84FullyAsymptoticKeyRateEstimate</span><span class="p">(</span><span class="n">AsymptoticKeyRateEstimate</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The situation for an asymptotic number of intensity settings and pulses.</span>
+
+<span class="sd">    In the fully asymptotic case we only have to consider a single intensity</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BB84FullyAsymptoticKeyRateEstimate.__init__"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FullyAsymptoticKeyRateEstimate.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detector</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            detector: The detector used at Bob&#39;s side</span>
+<span class="sd">            kwargs: Protocol specific input</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BB84FullyAsymptoticKeyRateEstimate.compute_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FullyAsymptoticKeyRateEstimate.compute_rate">[docs]</a>    <span class="k">def</span> <span class="nf">compute_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mu</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">],</span> <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes the key-rate given an intensity and an attenuation.</span>
+
+<span class="sd">        Only the vacuum states and single photon states can be safely used.</span>
+<span class="sd">        The error rate for vacuum states is 0.5. For single photon states we</span>
+<span class="sd">        must upper bound it.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mu: Intensity</span>
+<span class="sd">            attenuation: Attenuation</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Key-rate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+        <span class="n">detector</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">detector</span>
+
+        <span class="n">efficiency_bob</span> <span class="o">=</span> <span class="n">detector</span><span class="o">.</span><span class="n">efficiency_party</span>
+        <span class="n">efficiency_channel</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="n">attenuation</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="n">efficiency_system</span> <span class="o">=</span> <span class="n">efficiency_bob</span> <span class="o">*</span> <span class="n">efficiency_channel</span>
+
+        <span class="n">gain</span><span class="p">,</span> <span class="n">error_rate</span> <span class="o">=</span> <span class="n">compute_gain_and_error_rate</span><span class="p">(</span><span class="n">detector</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">attenuation</span><span class="p">)</span>
+
+        <span class="c1"># Compute the relevant terms for vacuum and single photon states</span>
+        <span class="n">yield_vacuum</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">detector</span><span class="o">.</span><span class="n">dark_count_rate</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">yield_single</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">detector</span><span class="o">.</span><span class="n">dark_count_rate</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">efficiency_system</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">yield_times_error_single</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">yield_single</span>
+            <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">detector</span><span class="o">.</span><span class="n">dark_count_rate</span><span class="p">)</span>
+            <span class="o">*</span> <span class="n">efficiency_system</span>
+            <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">detector</span><span class="o">.</span><span class="n">polarization_drift</span><span class="p">)</span>
+        <span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">error_single</span> <span class="o">=</span> <span class="n">yield_times_error_single</span> <span class="o">/</span> <span class="n">yield_single</span>
+        <span class="c1"># The probabilities of having precisely zero or one photon in a state</span>
+        <span class="p">(</span>
+            <span class="n">probability_vacuum_basis_X</span><span class="p">,</span>
+            <span class="n">probability_single_basis_X</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">mu</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># Pulses in Z-basis are used for error estimation, the pulses in the</span>
+        <span class="c1"># X-basis are used to obtain key-material</span>
+        <span class="n">h_entropy_single_basis_Z</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">h</span><span class="p">(</span><span class="n">error_single</span><span class="p">)</span>
+
+        <span class="n">gain_times_error_basis_X</span> <span class="o">=</span> <span class="n">gain</span> <span class="o">*</span> <span class="n">h</span><span class="p">(</span><span class="n">error_rate</span><span class="p">)</span>
+
+        <span class="n">key_rate</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">probability_vacuum_basis_X</span> <span class="o">*</span> <span class="n">yield_vacuum</span>
+            <span class="o">+</span> <span class="p">(</span><span class="n">probability_single_basis_X</span> <span class="o">*</span> <span class="n">yield_single</span> <span class="o">*</span> <span class="n">h_entropy_single_basis_Z</span><span class="p">)</span>
+            <span class="o">-</span> <span class="n">gain_times_error_basis_X</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">key_rate</span></div>
+
+    <span class="k">def</span> <span class="nf">_extract_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BB84FullyAsymptoticKeyRateEstimate.optimize_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FullyAsymptoticKeyRateEstimate.optimize_rate">[docs]</a>    <span class="k">def</span> <span class="nf">optimize_rate</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">x_0</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">],</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Function to optimize the key-rate</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            attenuation: Loss in dB for the channel</span>
+<span class="sd">            x_0: Initial search value, default value [0.5] is chosen.</span>
+<span class="sd">            bounds: Bounds on search range, default [(0.1, 0.9)]</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: When x_0 or bounds are given with invalid dimensions.</span>
+<span class="sd">            ValueError: when the found key-rate is negative.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Optimized intensity and key-rate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># The lower and upper bound on the laser intensity</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="mf">0.1</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="mf">0.9</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid dimensions input bounds. Expected 1 upper- and lower&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; bound. Received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span><span class="si">}</span><span class="s2"> lower- and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; upper bounds.&quot;</span>
+                <span class="p">)</span>
+        <span class="n">bounds</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">Bounds</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">x_0</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x_0</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid number of inputs. Expected 1 intensity.&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot; Received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span><span class="si">}</span><span class="s2"> intensities.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;attenuation&quot;</span><span class="p">:</span> <span class="n">attenuation</span><span class="p">}</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="p">,</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="o">**</span><span class="n">NLP_CONFIG</span>
+        <span class="p">)</span>
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">rate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="o">-</span><span class="n">res</span><span class="o">.</span><span class="n">fun</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">rate</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Optimization resulted in a negative key rate.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mu</span><span class="p">,</span> <span class="n">rate</span></div></div>
+
+
+<div class="viewcode-block" id="BB84AsymptoticKeyRateEstimate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84AsymptoticKeyRateEstimate">[docs]</a><span class="k">class</span> <span class="nc">BB84AsymptoticKeyRateEstimate</span><span class="p">(</span><span class="n">AsymptoticKeyRateEstimate</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The situation for an asymptotic number of pulses.</span>
+
+<span class="sd">    We consider a fixed number of intensities (number_of_decoy + 1)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BB84AsymptoticKeyRateEstimate.__init__"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84AsymptoticKeyRateEstimate.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">detector</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span> <span class="n">number_of_decoy</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            detector:  The detector used at Bob&#39;s side</span>
+<span class="sd">            number_of_decoy: Number of decoy intensities used</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">=</span> <span class="n">number_of_decoy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="BB84AsymptoticKeyRateEstimate.compute_last_positive_distance"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84AsymptoticKeyRateEstimate.compute_last_positive_distance">[docs]</a>    <span class="k">def</span> <span class="nf">compute_last_positive_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes the last positive distance.</span>
+
+<span class="sd">        The optimization routine sometimes considers a parameter setting</span>
+<span class="sd">        outside of the valid region. This function is used to push the</span>
+<span class="sd">        parameters back to the valid regime.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span></div>
+
+<div class="viewcode-block" id="BB84AsymptoticKeyRateEstimate.compute_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84AsymptoticKeyRateEstimate.compute_rate">[docs]</a>    <span class="k">def</span> <span class="nf">compute_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mu</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">],</span> <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes the key-rate given intensity-settings and an attenuation</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mu: Intensity</span>
+<span class="sd">            attenuation: Attenuation</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Key-rate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">mu</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># If the variable x is outside the possible range, push it back</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_last_positive_distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># Maximum on the number of photons per pulse to consider</span>
+        <span class="n">max_num_photons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">isf</span><span class="p">(</span><span class="mf">1e-12</span><span class="p">,</span> <span class="n">mu</span><span class="o">.</span><span class="n">max</span><span class="p">())),</span> <span class="mi">5</span><span class="p">))</span>
+
+        <span class="n">gain</span><span class="p">,</span> <span class="n">error_rate</span> <span class="o">=</span> <span class="n">compute_gain_and_error_rate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">detector</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">attenuation</span><span class="p">)</span>
+
+        <span class="c1"># Compute the yield and error rate for single photon pulses in the Z basis</span>
+        <span class="n">yield_single_basis_Z</span> <span class="o">=</span> <span class="n">ensure_probability</span><span class="p">(</span>
+            <span class="n">solve_lp</span><span class="p">(</span>
+                <span class="n">target_vacuum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">target_single</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
+                <span class="n">program_coefficients</span><span class="o">=</span><span class="n">gain</span><span class="p">,</span>
+                <span class="n">max_num_photons</span><span class="o">=</span><span class="n">max_num_photons</span><span class="p">,</span>
+            <span class="p">)[</span><span class="s2">&quot;fun&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">yield_times_error_basis_Z</span> <span class="o">=</span> <span class="n">ensure_probability</span><span class="p">(</span>
+            <span class="o">-</span><span class="n">solve_lp</span><span class="p">(</span>
+                <span class="n">target_vacuum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">target_single</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
+                <span class="n">program_coefficients</span><span class="o">=</span><span class="n">gain</span> <span class="o">*</span> <span class="n">error_rate</span><span class="p">,</span>
+                <span class="n">max_num_photons</span><span class="o">=</span><span class="n">max_num_photons</span><span class="p">,</span>
+            <span class="p">)[</span><span class="s2">&quot;fun&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">yield_single_basis_Z</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">error_single_basis_Z</span> <span class="o">=</span> <span class="mf">1e-19</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error_single_basis_Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span>
+                <span class="n">yield_times_error_basis_Z</span> <span class="o">/</span> <span class="n">yield_single_basis_Z</span><span class="p">,</span> <span class="mf">1e-19</span><span class="p">,</span> <span class="mf">0.5</span>
+            <span class="p">)</span>
+        <span class="n">h_entropy_single_basis_Z</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">h</span><span class="p">(</span><span class="n">error_single_basis_Z</span><span class="p">)</span>
+
+        <span class="c1"># Get the probability for vacuum and single photon pulses in the X basis</span>
+        <span class="p">(</span>
+            <span class="n">probability_vacuum_basis_X</span><span class="p">,</span>
+            <span class="n">probability_single_basis_X</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">mu</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># Compute the yield for vacuum and single photon pulses in the X basis</span>
+        <span class="n">yield_vacuum_single_basis_X</span> <span class="o">=</span> <span class="n">solve_lp</span><span class="p">(</span>
+            <span class="n">target_vacuum</span><span class="o">=</span><span class="n">probability_vacuum_basis_X</span><span class="p">,</span>
+            <span class="n">target_single</span><span class="o">=</span><span class="n">probability_single_basis_X</span> <span class="o">*</span> <span class="n">h_entropy_single_basis_Z</span><span class="p">,</span>
+            <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
+            <span class="n">program_coefficients</span><span class="o">=</span><span class="n">gain</span><span class="p">,</span>
+            <span class="n">max_num_photons</span><span class="o">=</span><span class="n">max_num_photons</span><span class="p">,</span>
+        <span class="p">)[</span><span class="s2">&quot;fun&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">yield_vacuum_single_basis_X</span><span class="p">)</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span>
+            <span class="n">yield_vacuum_single_basis_X</span>
+        <span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_last_positive_distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="c1"># Determine the overall key-rate</span>
+        <span class="n">gain_times_error_basis_X</span> <span class="o">=</span> <span class="n">gain</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">h</span><span class="p">(</span><span class="n">error_rate</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">key_rate</span> <span class="o">=</span> <span class="n">yield_vacuum_single_basis_X</span> <span class="o">-</span> <span class="n">gain_times_error_basis_X</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="n">key_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">mu</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">key_rate</span></div>
+
+    <span class="k">def</span> <span class="nf">_extract_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BB84AsymptoticKeyRateEstimate.optimize_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84AsymptoticKeyRateEstimate.optimize_rate">[docs]</a>    <span class="k">def</span> <span class="nf">optimize_rate</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">x_0</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">],</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Function to optimize the key-rate</span>
+
+<span class="sd">        For certain input parameters it can happen that the resulting lp problem is</span>
+<span class="sd">        unfeasible. In that case the attenuation is slightly modified (``+1e-6``) in an</span>
+<span class="sd">        attempt to obtain a feasible lp problem that can be solved.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            attenuation: Loss in dB for the channel</span>
+<span class="sd">            x_0: Initial search value, default midpoint search bounds</span>
+<span class="sd">            bounds: Bounds on search range</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Optimized intensity and key-rate</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: When x_0 or bounds are given with invalid dimensions.</span>
+<span class="sd">            ValueError: when the found key-rate is negative.</span>
+<span class="sd">            OptimizationError: When lp solver is unsuccessful due to infeasible problem.</span>
+<span class="sd">                Multiple attempts are made with slightly modified  attenuation before</span>
+<span class="sd">                error is raised.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># Lower and upper bounds on the considered laser intensities</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="mf">0.00000001</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">lower_bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># Help the optimizer</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="mf">0.95</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">upper_bound</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.3</span>  <span class="c1"># Help the optimizer</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid dimensions input bounds. Expected &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> upper- and lower bounds. Received &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span><span class="si">}</span><span class="s2"> lower- and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span><span class="si">}</span><span class="s2"> upper bounds.&quot;</span>
+                <span class="p">)</span>
+        <span class="n">optimize_bounds</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">Bounds</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+
+        <span class="n">less_one</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mf">1e-16</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="c1"># If no ansatz is given, choose the mean of the bounds.</span>
+        <span class="k">if</span> <span class="n">x_0</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x_0</span> <span class="o">=</span> <span class="p">(</span><span class="n">lower_bound</span> <span class="o">+</span> <span class="n">upper_bound</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid number of inputs. Expected &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> intensities. Received &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span><span class="si">}</span><span class="s2"> intensities.&quot;</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">x_0</span>
+
+        <span class="c1"># The constraints enforce the intensities to be decreasing</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">)))</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span> <span class="mi">1</span>
+        <span class="p">)</span> <span class="o">-</span> <span class="n">less_one</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">)))</span>
+        <span class="n">constraint</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">LinearConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;attenuation&quot;</span><span class="p">:</span> <span class="n">attenuation</span><span class="p">}</span>
+        <span class="n">num_attempts</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_attempts</span><span class="p">):</span>  <span class="c1"># Maximum 10 retries</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="p">,</span>
+                    <span class="n">x_0</span><span class="p">,</span>
+                    <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span>
+                    <span class="n">constraints</span><span class="o">=</span><span class="p">(</span><span class="n">constraint</span><span class="p">),</span>
+                    <span class="n">bounds</span><span class="o">=</span><span class="n">optimize_bounds</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">NLP_CONFIG</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="n">OptimizationError</span><span class="p">:</span>  <span class="c1"># Redo calculation</span>
+                <span class="n">args</span><span class="p">[</span><span class="s2">&quot;attenuation&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mf">1e-6</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mu</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span>
+                <span class="n">rate</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="o">-</span><span class="n">res</span><span class="o">.</span><span class="n">fun</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">rate</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Optimization resulted in a negative key rate.&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">mu</span><span class="p">,</span> <span class="n">rate</span>
+        <span class="k">raise</span> <span class="n">OptimizationError</span><span class="p">(</span><span class="s2">&quot;Unable to find solution for optimal key rate.&quot;</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="BB84FiniteKeyRateEstimate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FiniteKeyRateEstimate">[docs]</a><span class="k">class</span> <span class="nc">BB84FiniteKeyRateEstimate</span><span class="p">(</span><span class="n">FiniteKeyRateEstimate</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The situation for a finite number of pulses</span>
+
+<span class="sd">    A fixed number of intensities is considered.</span>
+<span class="sd">    The probabilities for both bases might vary.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BB84FiniteKeyRateEstimate.__init__"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FiniteKeyRateEstimate.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">detector</span><span class="p">:</span> <span class="n">Detector</span><span class="p">,</span>
+        <span class="n">number_of_pulses</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1e12</span><span class="p">,</span>
+        <span class="n">number_of_decoy</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Args:</span>
+<span class="sd">            detector: The detector used at Bob&#39;s side</span>
+<span class="sd">            number_of_pulses: Number of pulses sent</span>
+<span class="sd">            number_of_decoy: Number of decoy intensities used</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span> <span class="o">=</span> <span class="n">number_of_pulses</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">=</span> <span class="n">number_of_decoy</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="BB84FiniteKeyRateEstimate.compute_last_positive_distance"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FiniteKeyRateEstimate.compute_last_positive_distance">[docs]</a>    <span class="k">def</span> <span class="nf">compute_last_positive_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Computes the last positive distance.</span>
+
+<span class="sd">        The optimization routine sometimes considers a parameter setting</span>
+<span class="sd">        outside of the valid region. This function is used to push the</span>
+<span class="sd">        parameters back to the valid regime.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span></div>
+
+<div class="viewcode-block" id="BB84FiniteKeyRateEstimate.compute_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FiniteKeyRateEstimate.compute_rate">[docs]</a>    <span class="k">def</span> <span class="nf">compute_rate</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">mu</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">ArrayLike</span><span class="p">],</span>
+        <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">probability_basis_X</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">probability_basis_Z</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">,</span>
+        <span class="n">n_X</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the key-rate for a specific set of parameters</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            mu: Used intensities</span>
+<span class="sd">            attenuation: Attenuation of the channel</span>
+<span class="sd">            probability_basis_X: Probabilities for each intensity in the X-basis</span>
+<span class="sd">            probability_basis_Z: Probabilities for each intensity in the Z-basis</span>
+<span class="sd">            n_X: Number of pulses in the X-basis.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            key-rate</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+
+        <span class="c1"># Security parameters</span>
+        <span class="n">probability_abort</span> <span class="o">=</span> <span class="mf">2e-50</span>
+        <span class="n">epsilon_security</span> <span class="o">=</span> <span class="mf">2e-50</span>
+        <span class="n">epsilon_correct</span> <span class="o">=</span> <span class="mf">2e-50</span>
+        <span class="n">epsilon_1</span> <span class="o">=</span> <span class="mf">2e-55</span>
+        <span class="n">epsilon_2</span> <span class="o">=</span> <span class="mf">2e-55</span>
+        <span class="n">epsilon_3</span> <span class="o">=</span> <span class="mf">2e-55</span>
+        <span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-7</span>
+
+        <span class="c1"># The probabilities sum to 1, these are the conditional probabilities per basis</span>
+        <span class="n">probability_basis_X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">probability_basis_X</span><span class="p">)</span>
+        <span class="n">probability_basis_Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">probability_basis_Z</span><span class="p">)</span>
+        <span class="n">probability_basis_X_normalized</span> <span class="o">=</span> <span class="n">probability_basis_X</span> <span class="o">/</span> <span class="n">probability_basis_X</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">probability_basis_Z_normalized</span> <span class="o">=</span> <span class="n">probability_basis_Z</span> <span class="o">/</span> <span class="n">probability_basis_Z</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">mu</span><span class="p">,</span> <span class="n">probability_basis_X</span><span class="p">,</span> <span class="n">probability_basis_Z</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_last_positive_distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">gain</span><span class="p">,</span> <span class="n">error_rate</span> <span class="o">=</span> <span class="n">compute_gain_and_error_rate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">detector</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">attenuation</span><span class="p">)</span>
+
+        <span class="c1"># Compute number of detection events per intensity per basis</span>
+        <span class="k">if</span> <span class="n">n_X</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">n_X_observed_per_intensity</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">gain</span> <span class="o">*</span> <span class="n">ensure_probability</span><span class="p">(</span><span class="n">probability_basis_X</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span>
+            <span class="p">)</span>
+            <span class="n">n_Z_observed_per_intensity</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">gain</span> <span class="o">*</span> <span class="n">ensure_probability</span><span class="p">(</span><span class="n">probability_basis_Z</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">n_X_observed_per_intensity</span> <span class="o">=</span> <span class="n">gain</span> <span class="o">*</span> <span class="n">probability_basis_X_normalized</span> <span class="o">*</span> <span class="n">n_X</span>
+            <span class="n">n_Z_observed_per_intensity</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">gain</span> <span class="o">*</span> <span class="n">probability_basis_Z_normalized</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span> <span class="o">-</span> <span class="n">n_X</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">n_X_observed</span> <span class="o">=</span> <span class="n">n_X_observed_per_intensity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">n_Z_observed</span> <span class="o">=</span> <span class="n">n_Z_observed_per_intensity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">n_X_observed</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n_Z_observed</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_last_positive_distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># And their corresponding number of errors</span>
+        <span class="n">number_of_errors_per_intensity_basis_X</span> <span class="o">=</span> <span class="n">error_rate</span> <span class="o">*</span> <span class="n">n_X_observed_per_intensity</span>
+        <span class="n">number_of_errors_per_intensity_basis_Z</span> <span class="o">=</span> <span class="n">error_rate</span> <span class="o">*</span> <span class="n">n_Z_observed_per_intensity</span>
+        <span class="n">number_of_errors_basis_X</span> <span class="o">=</span> <span class="n">number_of_errors_per_intensity_basis_X</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="c1"># Maximum on the number of photons per pulse to consider</span>
+        <span class="n">max_num_photons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">isf</span><span class="p">(</span><span class="mf">1e-16</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()),</span> <span class="mi">5</span><span class="p">))</span>
+
+        <span class="c1"># Epsilon values to be considered in the optimization.</span>
+        <span class="c1"># Values for the intensities and the number of photons per pulse are used,</span>
+        <span class="c1"># as well as the number of photon per pulse given a basis</span>
+        <span class="n">epsilon_single_photon</span> <span class="o">=</span> <span class="mf">1e-7</span>
+        <span class="n">epsilon_intensity_j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mf">1e-8</span><span class="p">,</span> <span class="n">mu</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">epsilon_num_photons_M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mf">1e-8</span><span class="p">,</span> <span class="n">max_num_photons</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">epsilon_num_photons_M_in_basis_B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mf">1e-8</span><span class="p">,</span> <span class="n">mu</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="c1"># The probability of a single photon pulse for each of the intensities</span>
+        <span class="n">probability_single_photon_per_intensity</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+        <span class="n">probability_single_photon_per_intensity</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">probability_single_photon_per_intensity</span>
+            <span class="o">/</span> <span class="n">probability_single_photon_per_intensity</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Solve linear programs to get the number of single photon events</span>
+        <span class="c1"># and the number of errors in these single photon events in the Z basis</span>
+        <span class="c1"># For vacuum pulses, the error is 0.5</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">number_single_photon_events_in_basis_Z</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">solve_finite_lp</span><span class="p">(</span>
+                <span class="n">target_vacuum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">target_single</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">probabilities_intensity_j</span><span class="o">=</span><span class="n">probability_basis_Z_normalized</span><span class="p">,</span>
+                <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
+                <span class="n">max_num_photons</span><span class="o">=</span><span class="n">max_num_photons</span><span class="p">,</span>
+                <span class="n">number_of_pulses</span><span class="o">=</span><span class="n">n_Z_observed</span><span class="p">,</span>
+                <span class="n">observed_count</span><span class="o">=</span><span class="n">n_Z_observed_per_intensity</span><span class="p">,</span>
+                <span class="n">epsilon_mu_j</span><span class="o">=</span><span class="n">epsilon_intensity_j</span><span class="p">,</span>
+                <span class="n">epsilon_num_photons_M</span><span class="o">=</span><span class="n">epsilon_num_photons_M</span><span class="p">,</span>
+                <span class="n">epsilon_num_photons_M_in_basis_B</span><span class="o">=</span><span class="n">epsilon_num_photons_M_in_basis_B</span><span class="p">,</span>
+            <span class="p">)[</span><span class="s2">&quot;x&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+            <span class="o">*</span> <span class="n">n_Z_observed</span>
+        <span class="p">)</span>
+        <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">number_single_photon_errors_in_basis_Z</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">solve_finite_lp</span><span class="p">(</span>
+                <span class="n">target_vacuum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                <span class="n">target_single</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">probabilities_intensity_j</span><span class="o">=</span><span class="n">probability_basis_Z_normalized</span><span class="p">,</span>
+                <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
+                <span class="n">max_num_photons</span><span class="o">=</span><span class="n">max_num_photons</span><span class="p">,</span>
+                <span class="n">number_of_pulses</span><span class="o">=</span><span class="n">n_Z_observed</span><span class="p">,</span>
+                <span class="n">observed_count</span><span class="o">=</span><span class="n">number_of_errors_per_intensity_basis_Z</span><span class="p">,</span>
+                <span class="n">epsilon_mu_j</span><span class="o">=</span><span class="n">epsilon_intensity_j</span><span class="p">,</span>
+                <span class="n">epsilon_num_photons_M</span><span class="o">=</span><span class="n">epsilon_num_photons_M</span><span class="p">,</span>
+                <span class="n">epsilon_num_photons_M_in_basis_B</span><span class="o">=</span><span class="n">epsilon_num_photons_M_in_basis_B</span><span class="p">,</span>
+            <span class="p">)[</span><span class="s2">&quot;x&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+            <span class="o">*</span> <span class="n">n_Z_observed</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">number_single_photon_events_in_basis_Z</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">error_rate_single_photon_basis_Z</span> <span class="o">=</span> <span class="mf">1e-19</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">error_rate_single_photon_basis_Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span>
+                <span class="n">number_single_photon_errors_in_basis_Z</span>
+                <span class="o">/</span> <span class="n">number_single_photon_events_in_basis_Z</span><span class="p">,</span>
+                <span class="mf">1e-19</span><span class="p">,</span>
+                <span class="mf">0.5</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="c1"># Solve the linear program for vacuum and single photon pulses in X-basis</span>
+        <span class="c1"># Note the expression for target_single, this takes into account the</span>
+        <span class="c1"># errors in the Z-basis and the number of pulses in both.</span>
+
+        <span class="n">res</span> <span class="o">=</span> <span class="n">solve_finite_lp</span><span class="p">(</span>
+            <span class="n">target_vacuum</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">target_single</span><span class="o">=</span><span class="mi">1</span>
+            <span class="o">-</span> <span class="n">h</span><span class="p">(</span>
+                <span class="n">error_rate_single_photon_basis_Z</span>
+                <span class="o">+</span> <span class="n">delta</span><span class="p">(</span>
+                    <span class="n">n_X_observed</span><span class="p">,</span>
+                    <span class="n">n_Z_observed</span><span class="p">,</span>
+                    <span class="n">epsilon_single_photon</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">),</span>
+            <span class="n">probabilities_intensity_j</span><span class="o">=</span><span class="n">probability_basis_X_normalized</span><span class="p">,</span>
+            <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span>
+            <span class="n">max_num_photons</span><span class="o">=</span><span class="n">max_num_photons</span><span class="p">,</span>
+            <span class="n">number_of_pulses</span><span class="o">=</span><span class="n">n_X_observed</span><span class="p">,</span>
+            <span class="n">observed_count</span><span class="o">=</span><span class="n">n_X_observed_per_intensity</span><span class="p">,</span>
+            <span class="n">epsilon_mu_j</span><span class="o">=</span><span class="n">epsilon_intensity_j</span><span class="p">,</span>
+            <span class="n">epsilon_num_photons_M</span><span class="o">=</span><span class="n">epsilon_num_photons_M</span><span class="p">,</span>
+            <span class="n">epsilon_num_photons_M_in_basis_B</span><span class="o">=</span><span class="n">epsilon_num_photons_M_in_basis_B</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="p">(</span>
+            <span class="n">number_vacuum_events_basis_X</span><span class="p">,</span>
+            <span class="n">number_single_events_basis_X</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">res</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">n_X_observed</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;fun&quot;</span><span class="p">])</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">isinf</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;fun&quot;</span><span class="p">]):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_last_positive_distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># With the results from the LP, we can determine the number of usable pulses</span>
+        <span class="n">number_vacuum_single_pulses</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">number_vacuum_events_basis_X</span>
+            <span class="o">+</span> <span class="n">number_single_events_basis_X</span>
+            <span class="o">-</span> <span class="n">number_single_events_basis_X</span>
+            <span class="o">*</span> <span class="p">(</span>
+                <span class="n">h</span><span class="p">(</span>
+                    <span class="n">number_single_photon_errors_in_basis_Z</span>
+                    <span class="o">+</span> <span class="n">delta</span><span class="p">(</span>
+                        <span class="n">n_X_observed</span><span class="p">,</span>
+                        <span class="n">n_Z_observed</span><span class="p">,</span>
+                        <span class="n">epsilon_1</span><span class="p">,</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">error_rate_basis_X</span> <span class="o">=</span> <span class="n">number_of_errors_basis_X</span> <span class="o">/</span> <span class="n">n_X_observed</span>
+        <span class="n">usable_pulses_lp</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">number_vacuum_single_pulses</span>
+            <span class="o">-</span> <span class="n">n_X_observed</span>
+            <span class="o">*</span> <span class="p">(</span><span class="n">h</span><span class="p">(</span><span class="n">error_rate_basis_X</span><span class="p">)</span> <span class="o">+</span> <span class="n">delta_ec</span><span class="p">(</span><span class="n">probability_abort</span><span class="p">,</span> <span class="n">n_X_observed</span><span class="p">))</span>
+            <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span>
+                <span class="n">epsilon_correct</span>
+                <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">epsilon_2</span> <span class="o">*</span> <span class="n">epsilon_3</span> <span class="o">*</span> <span class="p">(</span><span class="n">epsilon_security</span> <span class="o">-</span> <span class="n">epsilon</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="o">-</span> <span class="mi">1</span>
+        <span class="p">)</span>
+
+        <span class="c1"># With which we can determine the key-rate</span>
+        <span class="n">key_rate</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">probability_abort</span><span class="p">)</span> <span class="o">*</span> <span class="n">usable_pulses_lp</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_pulses</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="n">key_rate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="n">key_rate</span></div>
+
+    <span class="k">def</span> <span class="nf">_extract_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">ArrayLike</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Extract the parameters and assigns them correspondingly.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">mu</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]),</span>
+            <span class="n">probability_basis_X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                <span class="n">x</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span>
+            <span class="p">),</span>
+            <span class="n">probability_basis_Z</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">:]),</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="BB84FiniteKeyRateEstimate.optimize_rate"><a class="viewcode-back" href="../../../../qkd_key_rate.protocols.quantum.bb84.html#qkd_key_rate.protocols.quantum.BB84FiniteKeyRateEstimate.optimize_rate">[docs]</a>    <span class="k">def</span> <span class="nf">optimize_rate</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="o">*</span><span class="p">,</span>
+        <span class="n">attenuation</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">x_0</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">bounds</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">ArrayLike</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">float_</span><span class="p">],</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Function to optimize the key-rate</span>
+
+<span class="sd">        The laser intensities should be ordered and the probabilities should</span>
+<span class="sd">        sum to one. Probabilities for both X and Z-basis are considered</span>
+<span class="sd">        simultaneously. We consider the Z-basis for error estimation and the</span>
+<span class="sd">        X-basis for key-rate estimation, so no sifting rate is considered.</span>
+
+<span class="sd">        For certain input parameters it can happen that the resulting lp problem is</span>
+<span class="sd">        unfeasible. In that case the attenuation is slightly modified (``+1e-6``) in an</span>
+<span class="sd">        attempt to obtain a feasible lp problem that can be solved.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            attenuation: Loss in dB for the channel</span>
+<span class="sd">            x_0: Initial search value</span>
+<span class="sd">            bounds: Bounds on search range</span>
+<span class="sd">            args: Other variables to be optimized, for instance the attenuation</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Optimized x=[intensity, probability_basis_X, probability_basis_Z]</span>
+<span class="sd">            and found optimal key-rate</span>
+
+<span class="sd">        Raises:</span>
+<span class="sd">            ValueError: When x_0 or bounds are given with invalid dimensions.</span>
+<span class="sd">            ValueError: when the found key-rate is negative.</span>
+<span class="sd">            OptimizationError: When lp solver is unsuccessful due to infeasible problem.</span>
+<span class="sd">                Multiple attempts are made with slightly modified  attenuation before</span>
+<span class="sd">                error is raised.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">less_one</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mf">1e-16</span>
+
+        <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="mf">1e-16</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+                <span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)),</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)),</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lower_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="n">upper_bound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">bound</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">bound</span> <span class="ow">in</span> <span class="n">bounds</span><span class="p">])</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span>
+                <span class="n">upper_bound</span>
+            <span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Invalid dimensions input bounds. Expected &quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2"> upper- and lower bounds.&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Received </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span><span class="si">}</span><span class="s2"> lower-&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot; and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span><span class="si">}</span><span class="s2"> upper bounds.&quot;</span>
+                <span class="p">)</span>
+
+        <span class="n">optimize_bounds</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">Bounds</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">,</span> <span class="n">upper_bound</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">x_0</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x_0</span> <span class="o">=</span> <span class="p">(</span><span class="n">lower_bound</span> <span class="o">+</span> <span class="n">upper_bound</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid number of inputs. Expected &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2"> inputs. Received &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x_0</span><span class="p">)</span><span class="si">}</span><span class="s2"> inputs.&quot;</span>
+            <span class="p">)</span>
+        <span class="c1"># The probabilities are normalized to 1</span>
+        <span class="n">x_0</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:]</span> <span class="o">/=</span> <span class="n">x_0</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_positive</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_x</span> <span class="o">=</span> <span class="n">x_0</span>
+
+        <span class="c1"># The constraints enforce the intensities to be decreasing</span>
+        <span class="c1"># Furthermore, it enforces that the probabilities are between zero and</span>
+        <span class="c1"># one and that they together sum to one</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">),</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="mi">1</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+                        <span class="p">(</span>
+                            <span class="p">(</span>
+                                <span class="n">np</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span>
+                                    <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span>
+                                        <span class="p">(</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">,</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                                        <span class="p">),</span>
+                                        <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                                    <span class="p">),</span>
+                                    <span class="mi">1</span><span class="p">,</span>
+                                <span class="p">)</span>
+                                <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+                                    <span class="p">(</span>
+                                        <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span>
+                                            <span class="n">less_one</span>
+                                            <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+                                        <span class="p">),</span>
+                                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span>
+                                    <span class="p">)</span>
+                                <span class="p">)</span>
+                            <span class="p">),</span>
+                            <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span>
+                                <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">2</span><span class="p">),</span>
+                                <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                            <span class="p">),</span>
+                        <span class="p">)</span>
+                    <span class="p">),</span>
+                    <span class="mi">0</span><span class="p">,</span>
+                <span class="p">),</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">3</span><span class="p">),</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+                    <span class="p">(</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span>
+                        <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span>
+                    <span class="p">)</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+            <span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">),</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number_of_decoy</span> <span class="o">+</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">constraint</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">LinearConstraint</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+        <span class="c1"># In some cases the gradient appears to be zero, indicating a linear function.</span>
+        <span class="c1"># It is not a linear function, hence we suppress the error</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;attenuation&quot;</span><span class="p">:</span> <span class="n">attenuation</span><span class="p">}</span>
+        <span class="n">num_attempts</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_attempts</span><span class="p">):</span>  <span class="c1"># Maximum 3 retries</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">res</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_f</span><span class="p">,</span>
+                    <span class="n">x_0</span><span class="p">,</span>
+                    <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span>
+                    <span class="n">constraints</span><span class="o">=</span><span class="p">(</span><span class="n">constraint</span><span class="p">),</span>
+                    <span class="n">bounds</span><span class="o">=</span><span class="n">optimize_bounds</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">NLP_CONFIG</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="n">OptimizationError</span><span class="p">:</span>  <span class="c1"># Redo calculation</span>
+                <span class="n">args</span><span class="p">[</span><span class="s2">&quot;attenuation&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mf">1e-6</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">mu</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">x</span>
+                <span class="n">rate</span> <span class="o">=</span> <span class="o">-</span><span class="n">res</span><span class="o">.</span><span class="n">fun</span>
+                <span class="k">if</span> <span class="n">rate</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Optimization resulted in a negative key rate.&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">mu</span><span class="p">,</span> <span class="n">rate</span>
+        <span class="k">raise</span> <span class="n">OptimizationError</span><span class="p">(</span><span class="s2">&quot;Unable to find solution for optimal key rate.&quot;</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2023, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

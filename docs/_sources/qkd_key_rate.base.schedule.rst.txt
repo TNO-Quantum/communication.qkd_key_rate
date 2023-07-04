@@ -1,0 +1,7 @@
+qkd\_key\_rate.base.schedule module
+===================================
+
+.. automodule:: qkd_key_rate.base.schedule
+   :members:
+   :undoc-members:
+   :show-inheritance:

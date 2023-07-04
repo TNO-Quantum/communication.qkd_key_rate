@@ -1,0 +1,17 @@
+qkd\_key\_rate package
+======================
+
+.. automodule:: qkd_key_rate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+.. toctree::
+   :maxdepth: 4
+
+
+   qkd_key_rate.base
+   qkd_key_rate.protocols
+   qkd_key_rate.utils

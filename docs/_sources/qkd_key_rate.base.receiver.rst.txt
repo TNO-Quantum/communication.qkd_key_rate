@@ -1,0 +1,7 @@
+qkd\_key\_rate.base.receiver module
+===================================
+
+.. automodule:: qkd_key_rate.base.receiver
+   :members:
+   :undoc-members:
+   :show-inheritance:

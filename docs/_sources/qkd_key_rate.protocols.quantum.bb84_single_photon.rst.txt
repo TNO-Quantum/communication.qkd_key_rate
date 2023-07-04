@@ -1,0 +1,7 @@
+qkd\_key\_rate.protocols.quantum.bb84\_single\_photon module
+============================================================
+
+.. automodule:: qkd_key_rate.protocols.quantum.bb84_single_photon
+   :members:
+   :undoc-members:
+   :show-inheritance:

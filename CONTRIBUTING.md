@@ -1,0 +1,1 @@
+We welcome contributions in the form of bug reports, code, design ideas, etc.

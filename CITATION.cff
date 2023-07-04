@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+license: Apache-2.0
+message: If you use this software, please cite it using these metadata.
+authors:
+      - name: TNO Quantum
+        city: The Hague
+        country: NL
+        email: tnoquantum@tno.nl
+        website: https://tno.nl
+type: software
+url: https://tno.nl
+contact:
+      - name: TNO Quantum
+        city: The Hague
+        country: NL
+        email: tnoquantum@tno.nl
+        website: https://tno.nl
+repository-code: https://github.com/TNO-Quantum/communication.qkd_key_rate
+repository-artifact: https://pypi.org/project/tno.quantum.communication.qkd_key_rate
+title: TNO Quantum - Communication - QKD Key Rate
+version: v1.0.0
+date-released: 2023-07-04

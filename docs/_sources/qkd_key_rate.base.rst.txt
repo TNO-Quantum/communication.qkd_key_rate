@@ -1,0 +1,23 @@
+qkd\_key\_rate.base package
+===========================
+
+.. automodule:: qkd_key_rate.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+.. toctree::
+   :maxdepth: 4
+
+
+   qkd_key_rate.base.config
+   qkd_key_rate.base.corrector
+   qkd_key_rate.base.detector
+   qkd_key_rate.base.keyrate
+   qkd_key_rate.base.message
+   qkd_key_rate.base.parity_strategy
+   qkd_key_rate.base.permutations
+   qkd_key_rate.base.receiver
+   qkd_key_rate.base.schedule
+   qkd_key_rate.base.sender

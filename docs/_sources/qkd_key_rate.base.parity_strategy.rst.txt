@@ -1,0 +1,7 @@
+qkd\_key\_rate.base.parity\_strategy module
+===========================================
+
+.. automodule:: qkd_key_rate.base.parity_strategy
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qkd_key_rate.base.detector module &mdash; tno.quantum.communication.qkd_key_rate</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qkd_key_rate.base.keyrate module" href="qkd_key_rate.base.keyrate.html" />
+    <link rel="prev" title="qkd_key_rate.base.corrector module" href="qkd_key_rate.base.corrector.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            tno.quantum.communication.qkd_key_rate
+              <img src="_static/TNO_wit.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qkd_key_rate.html">qkd_key_rate package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="qkd_key_rate.base.html">qkd_key_rate.base package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.config.html">qkd_key_rate.base.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.corrector.html">qkd_key_rate.base.corrector module</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qkd_key_rate.base.detector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.keyrate.html">qkd_key_rate.base.keyrate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.message.html">qkd_key_rate.base.message module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.parity_strategy.html">qkd_key_rate.base.parity_strategy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.permutations.html">qkd_key_rate.base.permutations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.receiver.html">qkd_key_rate.base.receiver module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.schedule.html">qkd_key_rate.base.schedule module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.sender.html">qkd_key_rate.base.sender module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qkd_key_rate.protocols.html">qkd_key_rate.protocols package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.protocols.classical.html">qkd_key_rate.protocols.classical package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.classical.cascade.html">qkd_key_rate.protocols.classical.cascade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.classical.privacy_amplification.html">qkd_key_rate.protocols.classical.privacy_amplification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.classical.winnow.html">qkd_key_rate.protocols.classical.winnow module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.protocols.quantum.html">qkd_key_rate.protocols.quantum package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.quantum.bb84.html">qkd_key_rate.protocols.quantum.bb84 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.quantum.bb84_single_photon.html">qkd_key_rate.protocols.quantum.bb84_single_photon module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.quantum.bbm92.html">qkd_key_rate.protocols.quantum.bbm92 module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qkd_key_rate.utils.html">qkd_key_rate.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.utils.entropy.html">qkd_key_rate.utils.entropy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.utils.required_linktime.html">qkd_key_rate.utils.required_linktime module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tno.quantum.communication.qkd_key_rate</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="qkd_key_rate.html">qkd_key_rate package</a></li>
+          <li class="breadcrumb-item"><a href="qkd_key_rate.base.html">qkd_key_rate.base package</a></li>
+      <li class="breadcrumb-item active">qkd_key_rate.base.detector module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/qkd_key_rate.base.detector.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-qkd_key_rate.base.detector">
+<span id="qkd-key-rate-base-detector-module"></span><h1>qkd_key_rate.base.detector module<a class="headerlink" href="#module-qkd_key_rate.base.detector" title="Permalink to this heading"></a></h1>
+<p>Base class for detector objects.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="qkd_key_rate.base.detector.Detector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qkd_key_rate.base.detector.</span></span><span class="sig-name descname"><span class="pre">Detector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dead_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection_window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polarization_drift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.122782758757646</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_detector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dark_count_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dark_count_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_detector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_party</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/base/detector.html#Detector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.base.detector.Detector" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Class for the detectors to be used in the key-rate estimates.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.base.detector.Detector.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dead_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection_window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polarization_drift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.122782758757646</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_detector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dark_count_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dark_count_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_detector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_party</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/base/detector.html#Detector.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.base.detector.Detector.__init__" title="Permalink to this definition"></a></dt>
+<dd><p>Initialise a Detector instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Label of the detector party</p></li>
+<li><p><strong>jitter_source</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Time-delay introduced at the source</p></li>
+<li><p><strong>jitter_detector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Time-delay introduced at the detector</p></li>
+<li><p><strong>dead_time</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – The recovery time before a new event can be recorded</p></li>
+<li><p><strong>detection_window</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Time window used for event detection</p></li>
+<li><p><strong>efficiency_system</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Efficiency of the detecting side without the detector</p></li>
+<li><p><strong>polarization_drift</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Shift/drift in the encoding of the photons</p></li>
+<li><p><strong>error_detector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Error-rate of detector</p></li>
+<li><p><strong>dark_count_frequency</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Number of dark-counts per second</p></li>
+<li><p><strong>dark_count_rate</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Number of dark-counts per detection window</p></li>
+<li><p><strong>detection_frequency</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Number of detection windows per second</p></li>
+<li><p><strong>interval</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Length of a single detection window in seconds</p></li>
+<li><p><strong>efficiency_detector</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Efficiency of the detector on the detecting side</p></li>
+<li><p><strong>efficiency_party</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – Total efficiency of the detecting side</p></li>
+</ul>
+</dd>
+</dl>
+<p>If related optional arguments are both given they must satisfy</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\text{interval} = \frac{1}{\text{detection_frequency}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\text{dark_count_frequency} = \text{dark_count_rate} \cdot \text{detection_frequency}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\text{efficiency_party} = \text{efficiency_system} \cdot \text{efficiency_detector}\)</span></p></li>
+</ul>
+</div></blockquote>
+<p>If they are not given, they are calculated using the same formulas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Detector instance with specified parameters.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If a required field is missing.</p></li>
+<li><p><strong>ValueError</strong> – If a needed optional field is missing.</p></li>
+<li><p><strong>AssertionError</strong> – If inconsistent related optional fields are provided.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.base.detector.Detector.customise">
+<span class="sig-name descname"><span class="pre">customise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jitter_detector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dead_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_system</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polarization_drift</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_detector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dark_count_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dark_count_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detection_frequency</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_detector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">efficiency_party</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/base/detector.html#Detector.customise"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.base.detector.Detector.customise" title="Permalink to this definition"></a></dt>
+<dd><p>Create a detector with customised parameter from current detector</p>
+<p>See <a class="reference internal" href="#qkd_key_rate.base.detector.Detector.__init__" title="qkd_key_rate.base.detector.Detector.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code></a> for parameter description.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qkd_key_rate.base.detector.Detector" title="qkd_key_rate.base.detector.Detector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Detector</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.base.detector.Detector.from_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/base/detector.html#Detector.from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.base.detector.Detector.from_file" title="Permalink to this definition"></a></dt>
+<dd><p>Construct Detectors from csv file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – Path to csv file.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="#qkd_key_rate.base.detector.Detector" title="qkd_key_rate.base.detector.Detector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Detector</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.base.detector.Detector.get_parameters">
+<span class="sig-name descname"><span class="pre">get_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/base/detector.html#Detector.get_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.base.detector.Detector.get_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Get all parameters of the Detector</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="qkd_key_rate.base.detector.Detector.required_fields">
+<span class="sig-name descname"><span class="pre">required_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['name',</span> <span class="pre">'jitter_source',</span> <span class="pre">'jitter_detector',</span> <span class="pre">'dead_time',</span> <span class="pre">'detection_window',</span> <span class="pre">'efficiency_system']</span></em><a class="headerlink" href="#qkd_key_rate.base.detector.Detector.required_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qkd_key_rate.base.corrector.html" class="btn btn-neutral float-left" title="qkd_key_rate.base.corrector module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qkd_key_rate.base.keyrate.html" class="btn btn-neutral float-right" title="qkd_key_rate.base.keyrate module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2023, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qkd_key_rate.protocols.quantum.bb84 module &mdash; tno.quantum.communication.qkd_key_rate</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/TNO_blue.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script>window.MathJax = {"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="qkd_key_rate.protocols.quantum.bb84_single_photon module" href="qkd_key_rate.protocols.quantum.bb84_single_photon.html" />
+    <link rel="prev" title="qkd_key_rate.protocols.quantum package" href="qkd_key_rate.protocols.quantum.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            tno.quantum.communication.qkd_key_rate
+              <img src="_static/TNO_wit.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="qkd_key_rate.html">qkd_key_rate package</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qkd_key_rate.base.html">qkd_key_rate.base package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.config.html">qkd_key_rate.base.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.corrector.html">qkd_key_rate.base.corrector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.detector.html">qkd_key_rate.base.detector module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.keyrate.html">qkd_key_rate.base.keyrate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.message.html">qkd_key_rate.base.message module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.parity_strategy.html">qkd_key_rate.base.parity_strategy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.permutations.html">qkd_key_rate.base.permutations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.receiver.html">qkd_key_rate.base.receiver module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.schedule.html">qkd_key_rate.base.schedule module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.base.sender.html">qkd_key_rate.base.sender module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="qkd_key_rate.protocols.html">qkd_key_rate.protocols package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.protocols.classical.html">qkd_key_rate.protocols.classical package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.classical.cascade.html">qkd_key_rate.protocols.classical.cascade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.classical.privacy_amplification.html">qkd_key_rate.protocols.classical.privacy_amplification module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.classical.winnow.html">qkd_key_rate.protocols.classical.winnow module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="qkd_key_rate.protocols.quantum.html">qkd_key_rate.protocols.quantum package</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">qkd_key_rate.protocols.quantum.bb84 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.quantum.bb84_single_photon.html">qkd_key_rate.protocols.quantum.bb84_single_photon module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qkd_key_rate.protocols.quantum.bbm92.html">qkd_key_rate.protocols.quantum.bbm92 module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qkd_key_rate.utils.html">qkd_key_rate.utils package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.utils.entropy.html">qkd_key_rate.utils.entropy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qkd_key_rate.utils.required_linktime.html">qkd_key_rate.utils.required_linktime module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tno.quantum.communication.qkd_key_rate</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="qkd_key_rate.html">qkd_key_rate package</a></li>
+          <li class="breadcrumb-item"><a href="qkd_key_rate.protocols.html">qkd_key_rate.protocols package</a></li>
+          <li class="breadcrumb-item"><a href="qkd_key_rate.protocols.quantum.html">qkd_key_rate.protocols.quantum package</a></li>
+      <li class="breadcrumb-item active">qkd_key_rate.protocols.quantum.bb84 module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/qkd_key_rate.protocols.quantum.bb84.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-qkd_key_rate.protocols.quantum.bb84">
+<span id="qkd-key-rate-protocols-quantum-bb84-module"></span><h1>qkd_key_rate.protocols.quantum.bb84 module<a class="headerlink" href="#module-qkd_key_rate.protocols.quantum.bb84" title="Permalink to this heading"></a></h1>
+<p>Classes to perform key error rate estimate for the BB84 QKD protocol.</p>
+<p>This code is based on TNO’s BB84 key-rate paper (doi: <a class="reference external" href="https://doi.org/10.1007/s11128-021-03078-0">10.1007/s11128-021-03078-0</a>):</p>
+<p>Quantum Key Distribution (QKD) protocols rely on an entangled photon source that
+produces entangled photon pairs, which are distributed over two parties. Both parties
+randomly choose one of two predefined measurement bases. As the photons are entangled,
+non-random results will only be obtained for specific combinations of basis choices.
+Detection events are sifted, where only the detection events corresponding to events
+where both parties measured in an appropriate basis should be kept. Part of the
+resulting sifted key is made public which can be used to estimate the key error rate.</p>
+<p>The famous BB84 protocol by Charles Bennett and Gilles Brassard for establishing a
+secure key between two parties, usually called Alice and Bob. Alice prepares a quantum
+state in one of four ways, and Bob measures the quantum state in one of two ways. Based
+on the way of measuring alone, both Alice and Bob can establish a key (assuming
+noiseless operations). Classical post-processing routines can correct potential errors
+still occurring and can detect eavesdroppers.</p>
+<p>We consider three cases:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Fully Asymptotic Key Rate</dt><dd><p>Both the number of pulses and the number of used decoy states is infinite. Because
+of the asymptotic number of pulses and decoy states, we can simplify the
+computations and instead work with a single intensity setting which we vary.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Asymptotic Key Rate</dt><dd><p>Only the number of pulses is asymptotic, the number of decoy states is finite and
+chosen by the user. We have to optimize the probabilities for the X- and Z-basis
+for each intensity setting. So with two additional decoy states, we have three
+intensity settings to optimize and six probabilities in total. We use linear
+programs (LPs) for this.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Finite Key Rate:</dt><dd><p>Both the number of pulses and the number of decoy states is finite and chosen by
+the user. The approach is similar to the asymptotic key rate module, however we
+have to take finite-key effects into account. We compute bounds on the effect of
+the finite key size and we use security parameters to impose a degree of certainty
+of these bounds.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Typical usage example:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.protocols.quantum.bb84</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">BB84FullyAsymptoticKeyRateEstimate</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">tno.quantum.communication.qkd_key_rate.test.conftest</span> <span class="kn">import</span> <span class="n">standard_detector</span>
+
+<span class="n">detector_Bob</span> <span class="o">=</span> <span class="n">standard_detector</span><span class="o">.</span><span class="n">customise</span><span class="p">(</span>
+    <span class="n">dark_count_rate</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">,</span>
+    <span class="n">polarization_drift</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">error_detector</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">efficiency_party</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">fully_asymptotic_key_rate</span> <span class="o">=</span> <span class="n">BB84FullyAsymptoticKeyRateEstimate</span><span class="p">(</span><span class="n">detector</span><span class="o">=</span><span class="n">detector_Bob</span><span class="p">)</span>
+<span class="n">mu</span><span class="p">,</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">fully_asymptotic_key_rate</span><span class="o">.</span><span class="n">optimize_rate</span><span class="p">(</span><span class="n">attenuation</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="py class">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">BB84AsymptoticKeyRateEstimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_decoy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84AsymptoticKeyRateEstimate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AsymptoticKeyRateEstimate</span></code></p>
+<p>The situation for an asymptotic number of pulses.</p>
+<p>We consider a fixed number of intensities (number_of_decoy + 1)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_decoy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84AsymptoticKeyRateEstimate.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>detector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Detector</span></code>) – The detector used at Bob’s side</p></li>
+<li><p><strong>number_of_decoy</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of decoy intensities used</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.compute_last_positive_distance">
+<span class="sig-name descname"><span class="pre">compute_last_positive_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84AsymptoticKeyRateEstimate.compute_last_positive_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.compute_last_positive_distance" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the last positive distance.</p>
+<p>The optimization routine sometimes considers a parameter setting
+outside of the valid region. This function is used to push the
+parameters back to the valid regime.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.compute_rate">
+<span class="sig-name descname"><span class="pre">compute_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84AsymptoticKeyRateEstimate.compute_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.compute_rate" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the key-rate given intensity-settings and an attenuation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mu</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – Intensity</p></li>
+<li><p><strong>attenuation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Attenuation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Key-rate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.optimize_rate">
+<span class="sig-name descname"><span class="pre">optimize_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84AsymptoticKeyRateEstimate.optimize_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84AsymptoticKeyRateEstimate.optimize_rate" title="Permalink to this definition"></a></dt>
+<dd><p>Function to optimize the key-rate</p>
+<p>For certain input parameters it can happen that the resulting lp problem is
+unfeasible. In that case the attenuation is slightly modified (<code class="docutils literal notranslate"><span class="pre">+1e-6</span></code>) in an
+attempt to obtain a feasible lp problem that can be solved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attenuation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Loss in dB for the channel</p></li>
+<li><p><strong>x_0</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">Optional[ArrayLike]</span></code>) – Initial search value, default midpoint search bounds</p></li>
+<li><p><strong>bounds</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>]]) – Bounds on search range</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optimized intensity and key-rate</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – When x_0 or bounds are given with invalid dimensions.</p></li>
+<li><p><strong>ValueError</strong> – when the found key-rate is negative.</p></li>
+<li><p><a class="reference internal" href="#qkd_key_rate.protocols.quantum.bb84.OptimizationError" title="qkd_key_rate.protocols.quantum.bb84.OptimizationError"><strong>OptimizationError</strong></a> – When lp solver is unsuccessful due to infeasible problem.
+    Multiple attempts are made with slightly modified  attenuation before
+    error is raised.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">BB84FiniteKeyRateEstimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_pulses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000000000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_decoy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FiniteKeyRateEstimate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FiniteKeyRateEstimate</span></code></p>
+<p>The situation for a finite number of pulses</p>
+<p>A fixed number of intensities is considered.
+The probabilities for both bases might vary.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_pulses</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000000000000.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_decoy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FiniteKeyRateEstimate.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>detector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Detector</span></code>) – The detector used at Bob’s side</p></li>
+<li><p><strong>number_of_pulses</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Number of pulses sent</p></li>
+<li><p><strong>number_of_decoy</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Number of decoy intensities used</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.compute_last_positive_distance">
+<span class="sig-name descname"><span class="pre">compute_last_positive_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FiniteKeyRateEstimate.compute_last_positive_distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.compute_last_positive_distance" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the last positive distance.</p>
+<p>The optimization routine sometimes considers a parameter setting
+outside of the valid region. This function is used to push the
+parameters back to the valid regime.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.compute_rate">
+<span class="sig-name descname"><span class="pre">compute_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability_basis_X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability_basis_Z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FiniteKeyRateEstimate.compute_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.compute_rate" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the key-rate for a specific set of parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mu</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – Used intensities</p></li>
+<li><p><strong>attenuation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Attenuation of the channel</p></li>
+<li><p><strong>probability_basis_X</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – Probabilities for each intensity in the X-basis</p></li>
+<li><p><strong>probability_basis_Z</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – Probabilities for each intensity in the Z-basis</p></li>
+<li><p><strong>n_X</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]) – Number of pulses in the X-basis.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>key-rate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.optimize_rate">
+<span class="sig-name descname"><span class="pre">optimize_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FiniteKeyRateEstimate.optimize_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FiniteKeyRateEstimate.optimize_rate" title="Permalink to this definition"></a></dt>
+<dd><p>Function to optimize the key-rate</p>
+<p>The laser intensities should be ordered and the probabilities should
+sum to one. Probabilities for both X and Z-basis are considered
+simultaneously. We consider the Z-basis for error estimation and the
+X-basis for key-rate estimation, so no sifting rate is considered.</p>
+<p>For certain input parameters it can happen that the resulting lp problem is
+unfeasible. In that case the attenuation is slightly modified (<code class="docutils literal notranslate"><span class="pre">+1e-6</span></code>) in an
+attempt to obtain a feasible lp problem that can be solved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attenuation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Loss in dB for the channel</p></li>
+<li><p><strong>x_0</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">Optional[ArrayLike]</span></code>) – Initial search value</p></li>
+<li><p><strong>bounds</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>]]) – Bounds on search range</p></li>
+<li><p><strong>args</strong> – Other variables to be optimized, for instance the attenuation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Optimized x=[intensity, probability_basis_X, probability_basis_Z]
+and found optimal key-rate</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – When x_0 or bounds are given with invalid dimensions.</p></li>
+<li><p><strong>ValueError</strong> – when the found key-rate is negative.</p></li>
+<li><p><a class="reference internal" href="#qkd_key_rate.protocols.quantum.bb84.OptimizationError" title="qkd_key_rate.protocols.quantum.bb84.OptimizationError"><strong>OptimizationError</strong></a> – When lp solver is unsuccessful due to infeasible problem.
+    Multiple attempts are made with slightly modified  attenuation before
+    error is raised.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">BB84FullyAsymptoticKeyRateEstimate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detector</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FullyAsymptoticKeyRateEstimate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AsymptoticKeyRateEstimate</span></code></p>
+<p>The situation for an asymptotic number of intensity settings and pulses.</p>
+<p>In the fully asymptotic case we only have to consider a single intensity</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detector</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FullyAsymptoticKeyRateEstimate.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate.__init__" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>detector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Detector</span></code>) – The detector used at Bob’s side</p></li>
+<li><p><strong>kwargs</strong> – Protocol specific input</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate.compute_rate">
+<span class="sig-name descname"><span class="pre">compute_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FullyAsymptoticKeyRateEstimate.compute_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate.compute_rate" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the key-rate given an intensity and an attenuation.</p>
+<p>Only the vacuum states and single photon states can be safely used.
+The error rate for vacuum states is 0.5. For single photon states we
+must upper bound it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mu</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – Intensity</p></li>
+<li><p><strong>attenuation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Attenuation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Key-rate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate.optimize_rate">
+<span class="sig-name descname"><span class="pre">optimize_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bounds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#BB84FullyAsymptoticKeyRateEstimate.optimize_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.BB84FullyAsymptoticKeyRateEstimate.optimize_rate" title="Permalink to this definition"></a></dt>
+<dd><p>Function to optimize the key-rate</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attenuation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Loss in dB for the channel</p></li>
+<li><p><strong>x_0</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">Optional[ArrayLike]</span></code>) – Initial search value, default value [0.5] is chosen.</p></li>
+<li><p><strong>bounds</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>]]) – Bounds on search range, default [(0.1, 0.9)]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – When x_0 or bounds are given with invalid dimensions.</p></li>
+<li><p><strong>ValueError</strong> – when the found key-rate is negative.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Optimized intensity and key-rate</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.OptimizationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">OptimizationError</span></span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#OptimizationError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.OptimizationError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></p>
+<p>Raised when optimization is unsuccessful.
+This error typically thrown when the lp problem is infeasible.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.bound_f">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">bound_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_pulses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probability</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#bound_f"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.bound_f" title="Permalink to this definition"></a></dt>
+<dd><p>Computes a bound used in the finite key-rate computations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_of_pulses</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of pulses considered</p></li>
+<li><p><strong>probability</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Probability of the event for which the bound-term is computed</p></li>
+<li><p><strong>epsilon</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Security-parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.compute_gain_and_error_rate">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">compute_gain_and_error_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attenuation</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#compute_gain_and_error_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.compute_gain_and_error_rate" title="Permalink to this definition"></a></dt>
+<dd><p>Computes the total gain and error rate of the channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>detector</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Detector</span></code>) – The used detector on Bob’s side</p></li>
+<li><p><strong>mu</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – Intensities of the laser</p></li>
+<li><p><strong>attenuation</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Loss of the channel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>The gain per intensity. The probability of an event, given a pulse.</p></li>
+<li><p>The error rate per intensity.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.delta">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">delta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#delta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.delta" title="Permalink to this definition"></a></dt>
+<dd><p>Computes a bound based on the number of pulses sent in both bases and
+an epsilon-security value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of pulses in the X-basis</p></li>
+<li><p><strong>n_z</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of pulses in the Z-basis</p></li>
+<li><p><strong>e1</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Epsilon-security parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.delta_ec">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">delta_ec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p_abort</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#delta_ec"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.delta_ec" title="Permalink to this definition"></a></dt>
+<dd><p>Computes a bound on the losses due to error correction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p_abort</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Abort probability, used if there are too many errors</p></li>
+<li><p><strong>n_x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of pulses in the X-basis</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.ensure_probability">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">ensure_probability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#ensure_probability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.ensure_probability" title="Permalink to this definition"></a></dt>
+<dd><p>Ensure that we have a probability between zero and one.
+Other functions will otherwise throw an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>p</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Probability to be mapped to range <span class="math notranslate nohighlight">\([0, 1]\)</span>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Probability</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.lower_bound_matrix_gain">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">lower_bound_matrix_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_num_photons</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mus</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#lower_bound_matrix_gain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.lower_bound_matrix_gain" title="Permalink to this definition"></a></dt>
+<dd><p>Computes a lower bound on the likeliness of the number of photons per intensity</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_num_photons</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Maximum on the number of photons per pulse to consider</p></li>
+<li><p><strong>mus</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]]) – All used intensities</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.solve_finite_lp">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">solve_finite_lp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_vacuum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_single</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">probabilities_intensity_j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_photons</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_pulses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observed_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon_mu_j</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon_num_photons_M</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon_num_photons_M_in_basis_B</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#solve_finite_lp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.solve_finite_lp" title="Permalink to this definition"></a></dt>
+<dd><p>Solves the linear program (LP) for the finite case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_vacuum</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Coefficient for the vacuum state term</p></li>
+<li><p><strong>target_single</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Coefficient for the single photon state terms</p></li>
+<li><p><strong>probabilities_intensity_j</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]]) – Probability for each decoy state</p></li>
+<li><p><strong>mu</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]]) – The used intensity</p></li>
+<li><p><strong>max_num_photons</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The number of photons at which the sums are cut</p></li>
+<li><p><strong>number_of_pulses</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – Number of pulses sent in specific basis</p></li>
+<li><p><strong>observed_count</strong> (<code class="xref py py-const docutils literal notranslate"><span class="pre">ArrayLike</span></code>) – Number of pulses observed in specific basis per intensity</p></li>
+<li><p><strong>epsilon_mu_j</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]]) – Epsilon terms for the intensities</p></li>
+<li><p><strong>epsilon_num_photons_M</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]]) – Epsilon terms for the number of photons</p></li>
+<li><p><strong>epsilon_num_photons_M_in_basis_B</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]]) – Epsilon terms for the
+number of photons in basis B</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizeResult</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of usable pulses</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>The variables in the LP are</dt><dd><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n_0\)</span>: Number of vacuum pulses</p></li>
+<li><p><span class="math notranslate nohighlight">\(n_1\)</span>: Number of single photon pulses</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n_M\)</span>: Number of pulses with M pulses</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta_{j,1}\)</span>:  Deviation for intensity 1</p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta_{j,2}\)</span>:  Deviation for intensity 2</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ldots\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta_{j,m}\)</span>:  Deviation for intensity m</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="qkd_key_rate.protocols.quantum.bb84.solve_lp">
+<span class="sig-prename descclassname"><span class="pre">qkd_key_rate.protocols.quantum.bb84.</span></span><span class="sig-name descname"><span class="pre">solve_lp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_vacuum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_single</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">program_coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_num_photons</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/qkd_key_rate/protocols/quantum/bb84.html#solve_lp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qkd_key_rate.protocols.quantum.bb84.solve_lp" title="Permalink to this definition"></a></dt>
+<dd><p>Solves the linear program (LP) for the asymptotic case.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_vacuum</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Coefficient for the vacuum state term</p></li>
+<li><p><strong>target_single</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – Coefficient for the single photon state terms</p></li>
+<li><p><strong>mu</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float64</span></code>]]]) – The used intensity</p></li>
+<li><p><strong>program_coefficients</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]], <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">_SupportsArray</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>]]], <code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">_NestedSequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code>]]]) – The coefficients in the LP, e.g., gain,
+error-rate or their product</p></li>
+<li><p><strong>max_num_photons</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The number of photons at which the sums are cut</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>OptimizationError in case no solution was found for the LP.</strong> – </p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">OptimizeResult</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="qkd_key_rate.protocols.quantum.html" class="btn btn-neutral float-left" title="qkd_key_rate.protocols.quantum package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="qkd_key_rate.protocols.quantum.bb84_single_photon.html" class="btn btn-neutral float-right" title="qkd_key_rate.protocols.quantum.bb84_single_photon module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023-2023, TNO Quantum Code Lab.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

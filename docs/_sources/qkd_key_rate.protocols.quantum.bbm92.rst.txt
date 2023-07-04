@@ -1,0 +1,7 @@
+qkd\_key\_rate.protocols.quantum.bbm92 module
+=============================================
+
+.. automodule:: qkd_key_rate.protocols.quantum.bbm92
+   :members:
+   :undoc-members:
+   :show-inheritance:
