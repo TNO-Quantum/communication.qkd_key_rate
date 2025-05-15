@@ -1,7 +1,0 @@
-qkd\_key\_rate.base.detector module
-===================================
-
-.. automodule:: qkd_key_rate.base.detector
-   :members:
-   :undoc-members:
-   :show-inheritance:

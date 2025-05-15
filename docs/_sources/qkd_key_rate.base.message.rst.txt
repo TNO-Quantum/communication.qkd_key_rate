@@ -1,7 +1,0 @@
-qkd\_key\_rate.base.message module
-==================================
-
-.. automodule:: qkd_key_rate.base.message
-   :members:
-   :undoc-members:
-   :show-inheritance:

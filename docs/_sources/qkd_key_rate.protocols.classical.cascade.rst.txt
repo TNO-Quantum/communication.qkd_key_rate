@@ -1,7 +1,0 @@
-qkd\_key\_rate.protocols.classical.cascade module
-=================================================
-
-.. automodule:: qkd_key_rate.protocols.classical.cascade
-   :members:
-   :undoc-members:
-   :show-inheritance:

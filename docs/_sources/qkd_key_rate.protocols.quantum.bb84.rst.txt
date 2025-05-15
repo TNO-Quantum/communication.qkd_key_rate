@@ -1,7 +1,0 @@
-qkd\_key\_rate.protocols.quantum.bb84 module
-============================================
-
-.. automodule:: qkd_key_rate.protocols.quantum.bb84
-   :members:
-   :undoc-members:
-   :show-inheritance:

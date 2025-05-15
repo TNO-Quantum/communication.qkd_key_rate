@@ -1,7 +1,0 @@
-qkd\_key\_rate.protocols.classical.privacy\_amplification module
-================================================================
-
-.. automodule:: qkd_key_rate.protocols.classical.privacy_amplification
-   :members:
-   :undoc-members:
-   :show-inheritance:

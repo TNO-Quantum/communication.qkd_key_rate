@@ -27,11 +27,19 @@ The presented code can be used to
 - correct errors in exchanged sifted keys for the different QKD protocols,
 - apply privacy amplification by calculating secure key using hash function. 
 
-*Limitations in (end-)use: the content of this software package may solely be used for applications that comply with international export control laws.*
 
 ## Documentation
 
-Documentation of the `tno.quantum.communication.qkd_key_rate` package can be found [here](https://tno-quantum.github.io/communication.qkd_key_rate/)
+Documentation of the `tno.quantum.communication.qkd_key_rate` package can be found [here](https://tno-quantum.github.io/documentation/).
+
+The documentation contains usage examples that show
+
+- How to compute the secure key-rate for various protocols as function of the loss. 
+![BB84 protocols](./images/example1.png)
+
+- How to compute secure key-rate using the finite key-rate protocol for different number of pulses.
+![Example image](./images/example2.png)
+
 
 ## Install
 
@@ -45,72 +53,5 @@ If you wish to run the tests you can use:
 $ python -m pip install tno.quantum.communication.qkd_key_rate[tests]
 ```
 
-## Usage
-
-<details>
-  <summary>Compute secure key-rate.</summary>
-The following code demonstrates how the BB84 protocol can be used to calculate optimal key-rate for a specific detector.
-
-```python
-from tno.quantum.communication.qkd_key_rate.protocols.quantum.bb84 import (
-   BB84FullyAsymptoticKeyRateEstimate,
-)
-from tno.quantum.communication.qkd_key_rate.test.conftest import standard_detector
-
-detector = standard_detector.customise(
-    dark_count_rate=6e-7,
-    polarization_drift=0.0707,
-    error_detector=5e-3,
-    efficiency_detector=0.1,
-)
-
-fully_asymptotic_key_rate = BB84FullyAsymptoticKeyRateEstimate(detector=detector)
-mu, rate = fully_asymptotic_key_rate.optimize_rate(attenuation=0.2)
-```
-</details>
-
-<details>
-  <summary>Correct errors.</summary>
-The following example demonstrates usage of the Winnow error correction protocol.
-
-```python
-import numpy as np
-
-from tno.quantum.communication.qkd_key_rate.base import Message, Permutations, Schedule
-from tno.quantum.communication.qkd_key_rate.protocols.classical.winnow import (
-   WinnowCorrector,
-   WinnowReceiver,
-   WinnowSender,
-)
-
-error_rate = 0.05
-message_length = 10000
-input_message = Message.random_message(message_length=message_length)
-error_message = Message(
-   [x if np.random.rand() > error_rate else 1 - x for x in input_message]
-)
-schedule = Schedule.schedule_from_error_rate(error_rate=error_rate)
-number_of_passes = np.sum(schedule.schedule)
-permutations = Permutations.random_permutation(
-   number_of_passes=number_of_passes, message_size=message_length
-)
-
-alice = WinnowSender(
-   message=input_message, permutations=permutations, schedule=schedule
-)
-bob = WinnowReceiver(
-   message=error_message, permutations=permutations, schedule=schedule
-)
-corrector = WinnowCorrector(alice=alice, bob=bob)
-summary = corrector.correct_errors()
-```
-</details>
-
-# Examples
-The [examples](https://github.com/TNO-Quantum/examples) repository contain more elaborate examples that demonstrate possible usage
-
-- How to compute the secure key-rate for various protocols as function of the loss. 
-![BB84 protocols](./images/bb84_key_rate.png)
-
-- How to compute secure key-rate using the finite key-rate protocol for different number of pulses.
-![Example image](./images/finite_key_rate.png)
+## (End)use limitations
+The content of this software may solely be used for applications that comply with international export control laws.

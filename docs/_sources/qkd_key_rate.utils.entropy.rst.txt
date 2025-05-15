@@ -1,7 +1,0 @@
-qkd\_key\_rate.utils.entropy module
-===================================
-
-.. automodule:: qkd_key_rate.utils.entropy
-   :members:
-   :undoc-members:
-   :show-inheritance:
