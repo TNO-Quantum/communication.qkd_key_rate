@@ -35,6 +35,9 @@ class Permutations:
             return NotImplemented
         return self.permutations == other.permutations
 
+    def __hash__(self) -> int:
+        return hash(str(self.permutations))
+
     def __getitem__(self, pass_number: int) -> list[int]:
         """Return permutation for specific pass.
 

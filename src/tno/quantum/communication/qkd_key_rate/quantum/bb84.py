@@ -119,6 +119,7 @@ from tno.quantum.communication.qkd_key_rate.quantum._config import (
 from tno.quantum.communication.qkd_key_rate.quantum._keyrate import (
     AsymptoticKeyRateEstimate,
     FiniteKeyRateEstimate,
+    _fallback_key_rate_estimate,
 )
 
 if TYPE_CHECKING:
@@ -613,19 +614,8 @@ class BB84AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         """
         super().__init__(detector=detector, args=kwargs)
         self.number_of_decoy = number_of_decoy
-        self.last_positive: float = -1
+        self.last_positive_key_rate: float = -1
         self.last_x: NDArray[np.float64]
-
-    def _compute_last_positive_distance(self, x: NDArray[np.float64]) -> float:
-        """Computes the last positive distance.
-
-        The optimization routine sometimes considers a parameter setting
-        outside of the valid region. This function is used to push the
-        parameters back to the valid regime.
-        """
-        if self.last_positive > -1:
-            return self.last_positive - float(np.linalg.norm(x - self.last_x))
-        return self.last_positive
 
     def compute_rate(self, mu: float | ArrayLike, attenuation: float) -> float:  # type: ignore[override]
         """Computes the key-rate given intensity-settings and an attenuation.
@@ -641,8 +631,9 @@ class BB84AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         x = np.asarray(mu)
 
         if x.min() < 0 or x.max() > 1:
-            # If the variable x is outside the possible range, push it back
-            return self._compute_last_positive_distance(x)
+            return _fallback_key_rate_estimate(
+                x, self.last_x, self.last_positive_key_rate
+            )
 
         # Maximum on the number of photons per pulse to consider
         max_num_photons = np.max((int(scipy.stats.poisson.isf(1e-12, mu.max())), 5))
@@ -696,13 +687,15 @@ class BB84AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         if np.isnan(yield_vacuum_single_basis_X) or np.isinf(
             yield_vacuum_single_basis_X
         ):
-            return self._compute_last_positive_distance(x)
+            return _fallback_key_rate_estimate(
+                x, self.last_x, self.last_positive_key_rate
+            )
 
         # Determine the overall key-rate
         gain_times_error_basis_X = float(gain[0] * h(error_rate[0]))
         key_rate = yield_vacuum_single_basis_X - gain_times_error_basis_X
 
-        self.last_positive = key_rate
+        self.last_positive_key_rate = key_rate
         self.last_x = np.asarray(mu)
 
         return float(key_rate)
@@ -760,7 +753,7 @@ class BB84AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
 
         less_one = 1 - 1e-16
 
-        self.last_positive = -1
+        self.last_positive_key_rate = -1.0
         # If no ansatz is given, choose the mean of the bounds.
         if x0 is None:
             x0 = (lower_bound + upper_bound) / 2
@@ -831,19 +824,8 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         super().__init__(detector=detector, args=kwargs)
         self.number_of_pulses = number_of_pulses
         self.number_of_decoy = number_of_decoy
-        self.last_positive: float = -1
+        self.last_positive_key_rate: float = -1
         self.last_x: NDArray[np.float64]
-
-    def _compute_last_positive_distance(self, x: NDArray[np.float64]) -> float:
-        """Computes the last positive distance.
-
-        The optimization routine sometimes considers a parameter setting
-        outside of the valid region. This function is used to push the
-        parameters back to the valid regime.
-        """
-        if self.last_positive > -1:
-            return self.last_positive - float(np.linalg.norm(x - self.last_x))
-        return self.last_positive
 
     def compute_rate(  # type: ignore[override]
         self,
@@ -887,7 +869,9 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         mu = np.asarray(mu)
         x = np.hstack((mu, probability_basis_X, probability_basis_Z))
         if x.min() < 0 or x.max() > 1:
-            return self._compute_last_positive_distance(x)
+            return _fallback_key_rate_estimate(
+                x, self.last_x, self.last_positive_key_rate
+            )
 
         gain, error_rate = compute_gain_and_error_rate(self.detector, mu, attenuation)
 
@@ -909,7 +893,9 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         n_Z_observed = float(n_Z_observed_per_intensity.sum())
 
         if n_X_observed == 0 or n_Z_observed == 0:
-            return self._compute_last_positive_distance(x)
+            return _fallback_key_rate_estimate(
+                x, self.last_x, self.last_positive_key_rate
+            )
 
         # And their corresponding number of errors
         number_of_errors_per_intensity_basis_X = error_rate * n_X_observed_per_intensity
@@ -1016,7 +1002,9 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         ) = res["x"][0:2] * n_X_observed
 
         if np.isnan(res["fun"]) or np.isinf(res["fun"]):
-            return self._compute_last_positive_distance(x)
+            return _fallback_key_rate_estimate(
+                x, self.last_x, self.last_positive_key_rate
+            )
 
         # With the results from the LP, we can determine the number of usable pulses
         number_vacuum_single_pulses = (
@@ -1050,7 +1038,7 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         # With which we can determine the key-rate
         key_rate = (1 - probability_abort) * usable_pulses_lp / self.number_of_pulses
 
-        self.last_positive = key_rate
+        self.last_positive_key_rate = key_rate
         self.last_x = x
         return key_rate
 
@@ -1142,7 +1130,7 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         # The probabilities are normalized to 1
         x0[self.number_of_decoy + 1 :] /= x0[self.number_of_decoy + 1 :].sum()
 
-        self.last_positive = -1
+        self.last_positive_key_rate = -1.0
         self.last_x = x0
 
         # The constraints enforce the intensities to be decreasing

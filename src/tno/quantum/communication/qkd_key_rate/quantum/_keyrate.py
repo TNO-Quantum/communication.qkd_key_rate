@@ -12,6 +12,30 @@ if TYPE_CHECKING:
     from tno.quantum.communication.qkd_key_rate.quantum import Detector
 
 
+def _fallback_key_rate_estimate(
+    x: NDArray[np.float64],
+    last_x: NDArray[np.float64],
+    last_positive_key_rate: float,
+) -> float:
+    """Compute a key rate close to last found positive key rate.
+
+    During the optimization routine, it is possible that a solution is found that has
+    intensities that fall outside valid parameter ranges. In those cases we use this
+    function to push the parameters back to the valid regime by assigning a key-rate
+    close to last positive key rate.
+
+    Args:
+        x: Current input parameters.
+        last_x: Last valid input parameters for which positive key rate was found.
+        last_positive_key_rate: Key rate corresponding to last valid input parameters.
+
+    Returns:
+        Estimate of key-rate based based on difference between input parameters and the
+            last seen positive key rate.
+    """
+    return last_positive_key_rate - float(np.linalg.norm(x - last_x))
+
+
 class KeyRate(metaclass=abc.ABCMeta):
     """Key rate base class."""
 

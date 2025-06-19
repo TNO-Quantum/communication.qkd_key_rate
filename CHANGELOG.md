@@ -1,3 +1,9 @@
+# 2.0.1 (2025 - 06 - 19)
+
+## Bugfixes
+
+* **BBM92FiniteKeyRateEstimate**: The method `BBM92FiniteKeyRateEstimate.compute_rate` contained a bug resulting in its key-rate being off by a scaling factor.
+
 # 2.0.0 (2025 - 05 - 15)
 
 ### Features

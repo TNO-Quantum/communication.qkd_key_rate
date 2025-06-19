@@ -49,6 +49,9 @@ class Schedule:
             return NotImplemented
         return self.schedule == other.schedule
 
+    def __hash__(self) -> int:
+        return hash(str(self.schedule))
+
     def next_pass(self) -> int:
         """Find iteration index for the next pass and update processed schedule.
 

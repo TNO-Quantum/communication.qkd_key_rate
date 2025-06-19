@@ -88,6 +88,7 @@ from tno.quantum.communication.qkd_key_rate.quantum._config import (
 from tno.quantum.communication.qkd_key_rate.quantum._keyrate import (
     AsymptoticKeyRateEstimate,
     FiniteKeyRateEstimate,
+    _fallback_key_rate_estimate,
 )
 
 if TYPE_CHECKING:
@@ -316,9 +317,6 @@ class BBM92AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         super().__init__(detector=detector, args=kwargs)
         self.detector_alice = detector if detector_alice is None else detector_alice
 
-        self.last_positive: float = -1
-        self.last_x: NDArray[np.float64]
-
     def compute_rate(self, mu: float | ArrayLike, attenuation: float) -> float:  # type: ignore[override]
         """Compute the key-rate for a specific intensity and attenuation.
 
@@ -337,8 +335,6 @@ class BBM92AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         Raises:
             ValueError: When mu is given with invalid dimensions
         """
-        scale_factor = float(np.power(10, attenuation))
-
         mu = np.atleast_1d(mu)
         if mu.shape != (1,):
             error_msg = "Multiple intensities were given, only one is expected."
@@ -357,13 +353,7 @@ class BBM92AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         delta_bit = error_rate_lambda
         delta_phase = error_rate_lambda
 
-        key_rate = float(
-            scale_factor * gain_lambda * (one_minus_h(delta_phase) - h(delta_bit))
-        )
-
-        self.last_positive = key_rate
-        self.last_x = np.hstack([mu])
-        return key_rate / scale_factor
+        return float(gain_lambda * (one_minus_h(delta_phase) - h(delta_bit)))
 
     def _extract_parameters(
         self, x: NDArray[np.float64]
@@ -415,9 +405,6 @@ class BBM92AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
             )
             raise ValueError(error_msg)
 
-        self.last_positive = -1
-        self.last_x = np.asarray(x0)
-
         args = {"attenuation": attenuation}
         res = scipy.optimize.minimize(
             self._f, x0, args=args, bounds=bounds, **NLP_CONFIG
@@ -453,21 +440,10 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         super().__init__(detector=detector, args=kwargs)
         self.number_of_pulses = number_of_pulses
 
-        self.last_positive: float = -1
+        self.last_positive_key_rate: float = -1
         self.last_x: NDArray[np.float64]
 
         self.detector_alice = detector if detector_alice is None else detector_alice
-
-    def _compute_last_positive_distance(self, x: NDArray[np.float64]) -> float:
-        """Computes the last positive distance.
-
-        The optimization routine sometimes considers a parameter setting
-        outside of the valid region. This function is used to push the
-        parameters back to the valid regime.
-        """
-        if self.last_positive > -1:
-            return self.last_positive - float(np.linalg.norm(x - self.last_x))
-        return self.last_positive
 
     def compute_rate(  # type: ignore[override]
         self,
@@ -499,7 +475,6 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         """
         probability_basis_X = np.asarray(probability_basis_X)
         probability_basis_Z = np.asarray(probability_basis_Z)
-        scale_factor = np.power(10, attenuation / 10)
 
         mu = np.atleast_1d(mu)
         if mu.shape != (1,):
@@ -517,7 +492,9 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             or x.max() > 1
             or (probability_basis_X + probability_basis_Z) != 1
         ):
-            return self._compute_last_positive_distance(x)
+            return _fallback_key_rate_estimate(
+                x, self.last_x, self.last_positive_key_rate
+            )
 
         gain_lambda, error_rate_lambda = compute_gain_and_error_rate(
             self.detector,
@@ -536,7 +513,9 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
 
         # Check if the number of pulses in the X basis is positive
         if n_X_observed <= 0:
-            return self._compute_last_positive_distance(x)
+            return _fallback_key_rate_estimate(
+                x, self.last_x, self.last_positive_key_rate
+            )
 
         # These are the error rates corresponding to the X and Z basis
         # A bound is used for delta_phase (Z) errors
@@ -547,13 +526,11 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
 
         # Only the pulses in the X-basis are used to get key-material
         usable_pulses_lp = n_X_observed * (one_minus_h(delta_phase) - h(delta_bit))
-        key_rate = float(
-            scale_factor * (1 - p_abort) * usable_pulses_lp / self.number_of_pulses
-        )
+        key_rate = float((1 - p_abort) * usable_pulses_lp / self.number_of_pulses)
 
-        self.last_positive = key_rate
+        self.last_positive_key_rate = key_rate
         self.last_x = x
-        return self.last_positive
+        return key_rate
 
     def _extract_parameters(
         self, x: NDArray[np.float64]
@@ -614,7 +591,7 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         # The probabilities are normalized to 1
         x0[1:] /= x0[1:].sum()
 
-        self.last_positive = -1.0
+        self.last_positive_key_rate = -1.0
         self.last_x = x0
 
         bounds = scipy.optimize.Bounds(lower_bound, upper_bound)

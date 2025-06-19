@@ -18,5 +18,5 @@ contact:
 repository-code: https://github.com/TNO-Quantum/communication.qkd_key_rate
 repository-artifact: https://pypi.org/project/tno.quantum.communication.qkd_key_rate
 title: TNO Quantum - Communication - QKD Key Rate
-version: v2.0.0
-date-released: 2025-05-15
+version: v2.0.1
+date-released: 2025-06-19

@@ -10,7 +10,6 @@ Here, BBM92 is used, however, it also works for BB84.
 
 import numpy as np
 import pytest
-from numpy.typing import NDArray
 
 from tno.quantum.communication.qkd_key_rate.classical._required_linktime import (
     compute_efficiency,
@@ -35,7 +34,7 @@ detector = standard_detector
 @pytest.mark.parametrize("double_channel_loss", [5, 10, 15, 20])
 def test_required_linktime(
     error_correction_method: str, double_channel_loss: float
-) -> tuple[NDArray[np.int_], list[float]]:
+) -> None:
     # We compute the entropy for these number of pulses
     number_of_pulses = np.array(
         [int(factor * 10**exp) for exp in [9, 10, 11] for factor in range(1, 10)]
@@ -79,16 +78,3 @@ def test_required_linktime(
         entropy.append(net_number_of_pulses)
 
     assert entropy[0] < entropy[-1]
-    return number_of_pulses, entropy
-
-
-if __name__ == "__main__":
-    import matplotlib.pyplot as plt
-
-    number_of_pulses, entropy = test_required_linktime("Winnow", 5)
-
-    fig, ax = plt.subplots()
-    ax.loglog(number_of_pulses[: len(entropy)], entropy)
-    ax.set_xlabel("Number of pulses")
-    ax.set_ylabel("Entropy")
-    plt.show()
