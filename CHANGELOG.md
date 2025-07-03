@@ -1,3 +1,9 @@
+# 2.0.2 (2025 - 07 - 03)
+
+## Bugfixes
+
+* **PrivacyAmplification**: Corrected the output of `PrivacyAmplification.do_hash` method, which previously returned a digest size in bytes instead of bits. The method now returns a bitstring with the correct number of bits as intended.
+
 # 2.0.1 (2025 - 06 - 19)
 
 ## Bugfixes
