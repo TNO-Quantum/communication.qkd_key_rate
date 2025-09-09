@@ -5,6 +5,7 @@ from __future__ import annotations
 import abc
 import hashlib
 import hmac
+import warnings
 from dataclasses import dataclass, fields
 from typing import TYPE_CHECKING
 
@@ -149,6 +150,13 @@ class Corrector(metaclass=abc.ABCMeta):
             key_rate: The reconciliation rate
         """
         if exposed_bits:
+            if self.alice.net_exposed_bits > self.alice.message.length:
+                warnings.warn(
+                    "Number of exposed bits is larger than message length.",
+                    stacklevel=2,
+                )
+                return 0
+
             key_rate = (
                 self.alice.message.length - self.alice.net_exposed_bits
             ) / self.alice.original_message.length

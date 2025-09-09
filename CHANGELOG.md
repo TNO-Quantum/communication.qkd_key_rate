@@ -1,3 +1,9 @@
+# 2.0.3 (2025 - 09 - 09)
+
+## Bugfixes
+
+* **calculate_key_reconciliation_rate**: It was possible for `key_reconciliation_rate` to become negative if `net_exposed_bits` is larger than the message length. When this occurs a warning is raised and the `key_reconciliation_rate` is being set to zero.
+
 # 2.0.2 (2025 - 07 - 03)
 
 ## Bugfixes
