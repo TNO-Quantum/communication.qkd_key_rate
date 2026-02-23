@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import numpy as np
 from numpy.random import RandomState
-
 from tno.quantum.utils.validation import check_random_state
 
 

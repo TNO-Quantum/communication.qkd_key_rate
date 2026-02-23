@@ -6,7 +6,6 @@ from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
 
 from numpy.random import RandomState
-
 from tno.quantum.utils.validation import check_binary, check_random_state, check_real
 
 

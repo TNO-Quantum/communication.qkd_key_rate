@@ -58,7 +58,9 @@ def test_apply_error() -> None:
 
     error_rate = 0.5
     error_message = message.apply_errors(error_rate)
-    number_of_errors = sum(x != y for (x, y) in zip(message, error_message))
+    number_of_errors = sum(
+        x != y for (x, y) in zip(message, error_message, strict=False)
+    )
     expected_number_of_errors = message_length * error_rate
     assert number_of_errors <= expected_number_of_errors + 0.1 * message_length
     assert expected_number_of_errors - 0.1 * message_length <= number_of_errors

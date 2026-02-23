@@ -345,7 +345,7 @@ class BBM92AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
             self.detector_alice,
             attenuation / 2,
             attenuation / 2,
-            float(mu) / 2,
+            float(mu[0]) / 2,
         )
 
         # These are the error rates corresponding to the X and Z basis
@@ -353,7 +353,8 @@ class BBM92AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         delta_bit = error_rate_lambda
         delta_phase = error_rate_lambda
 
-        return float(gain_lambda * (one_minus_h(delta_phase) - h(delta_bit)))
+        key_rate = gain_lambda * (one_minus_h(delta_phase) - h(delta_bit))
+        return float(key_rate[0])
 
     def _extract_parameters(
         self, x: NDArray[np.float64]
@@ -501,7 +502,7 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             self.detector_alice,
             attenuation / 2,
             attenuation / 2,
-            float(mu / 2),
+            float(mu[0] / 2),
         )
 
         # Compute the number of pulses in the X basis. The Z-basis follows
@@ -526,8 +527,7 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
 
         # Only the pulses in the X-basis are used to get key-material
         usable_pulses_lp = n_X_observed * (one_minus_h(delta_phase) - h(delta_bit))
-        key_rate = float((1 - p_abort) * usable_pulses_lp / self.number_of_pulses)
-
+        key_rate = float(((1 - p_abort) * usable_pulses_lp / self.number_of_pulses)[0])
         self.last_positive_key_rate = key_rate
         self.last_x = x
         return key_rate

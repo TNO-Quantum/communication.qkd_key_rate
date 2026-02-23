@@ -5,6 +5,7 @@ import hmac
 from copy import deepcopy
 
 import numpy as np
+from tno.quantum.utils.validation import check_random_state
 
 from tno.quantum.communication.qkd_key_rate.classical import (
     Corrector,
@@ -25,7 +26,6 @@ from tno.quantum.communication.qkd_key_rate.classical.winnow import (
     WinnowReceiver,
     WinnowSender,
 )
-from tno.quantum.utils.validation import check_random_state
 
 random_state = check_random_state(None, "random_state")
 
@@ -91,6 +91,7 @@ def test_calculate_key_reconciliation_rate_cascade() -> None:
         results.key_reconciliation_rate
         == corrector.calculate_key_reconciliation_rate(exposed_bits=True)
     )
+    assert alice.number_of_exposed_bits == alice.net_exposed_bits
 
 
 def test_calculate_key_reconciliation_rate_winnow() -> None:
@@ -122,6 +123,7 @@ def test_calculate_key_reconciliation_rate_winnow() -> None:
         results.key_reconciliation_rate
         == corrector.calculate_key_reconciliation_rate(exposed_bits=True)
     )
+    assert alice.number_of_exposed_bits > alice.net_exposed_bits
 
 
 def test_calculate_key_reconciliation_rate_artificial() -> None:

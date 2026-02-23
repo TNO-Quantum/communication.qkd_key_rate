@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import pytest
+from tno.quantum.utils.validation import check_random_state
 
 from tno.quantum.communication.qkd_key_rate.classical import (
     Message,
@@ -14,7 +15,6 @@ from tno.quantum.communication.qkd_key_rate.classical.cascade import (
     CascadeReceiver,
     CascadeSender,
 )
-from tno.quantum.utils.validation import check_random_state
 
 random_state = check_random_state(None, "random_state")
 

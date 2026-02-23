@@ -33,4 +33,4 @@ Usage examples can be found in relevant submodules.
 __all__: list[str] = []
 
 
-__version__ = "2.0.3"
+__version__ = "2.0.4"

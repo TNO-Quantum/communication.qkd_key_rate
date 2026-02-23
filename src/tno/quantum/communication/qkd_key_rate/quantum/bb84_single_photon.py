@@ -119,7 +119,7 @@ class BB84SingleAsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
             raise ValueError(error_msg)
 
         Q, E = compute_gain_and_error_rate(self.detector, attenuation)
-        return float(mu[0] * Q * (1 - 2 * h(E)))
+        return float(mu[0] * Q * (1 - 2 * h(E)[0]))
 
     def _extract_parameters(
         self, x: NDArray[np.float64]
