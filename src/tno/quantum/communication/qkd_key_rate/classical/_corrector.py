@@ -118,7 +118,9 @@ class Corrector(metaclass=abc.ABCMeta):
         if message1.length == 0 or message2.length == 0:
             error_msg = "One of the messages has length zero."
             raise ValueError(error_msg)
-        return sum(x != y for (x, y) in zip(message1.message, message2.message))
+        return sum(
+            x != y for (x, y) in zip(message1.message, message2.message, strict=False)
+        )
 
     @staticmethod
     def calculate_error_rate(message1: Message, message2: Message) -> float:

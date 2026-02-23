@@ -6,7 +6,6 @@ from typing import TYPE_CHECKING, Any
 
 import numpy as np
 import pandas as pd
-
 from tno.quantum.utils.validation import check_path
 
 if TYPE_CHECKING:

@@ -1,6 +1,7 @@
 """Test the Winnow error correction protocol."""
 
 import numpy as np
+from tno.quantum.utils.validation import check_random_state
 
 from tno.quantum.communication.qkd_key_rate.classical import (
     Message,
@@ -12,7 +13,6 @@ from tno.quantum.communication.qkd_key_rate.classical.winnow import (
     WinnowReceiver,
     WinnowSender,
 )
-from tno.quantum.utils.validation import check_random_state
 
 random_state = check_random_state(None, "random_state")
 

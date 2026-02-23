@@ -1,3 +1,11 @@
+# 2.0.4 (2025 - 02 - 23)
+
+## Bugfixes
+
+* **Net number of exposed bits Winnow**: Bug in the `net_exposed_bits` returning `number_of_exposed_bits`. This causes problems for the Winnow algorithm where bits discarded.
+* Fix compatibility with `numpy~=2.4`
+* Drop python3.9 support
+
 # 2.0.3 (2025 - 09 - 09)
 
 ## Bugfixes

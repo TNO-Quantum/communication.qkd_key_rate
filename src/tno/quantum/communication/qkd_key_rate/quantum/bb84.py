@@ -528,11 +528,12 @@ class BB84FullyAsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
 
         gain_times_error_basis_X = gain * h(error_rate)
 
-        return float(
+        key_rate = (
             probability_vacuum_basis_X * yield_vacuum
             + (probability_single_basis_X * yield_single * h_entropy_single_basis_Z)
             - gain_times_error_basis_X
         )
+        return float(key_rate[0])
 
     def _extract_parameters(
         self, x: NDArray[np.float64]
@@ -692,7 +693,7 @@ class BB84AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
             )
 
         # Determine the overall key-rate
-        gain_times_error_basis_X = float(gain[0] * h(error_rate[0]))
+        gain_times_error_basis_X = float(gain[0] * h(error_rate[0])[0])
         key_rate = yield_vacuum_single_basis_X - gain_times_error_basis_X
 
         self.last_positive_key_rate = key_rate

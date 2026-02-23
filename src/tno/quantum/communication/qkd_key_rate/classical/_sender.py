@@ -63,4 +63,4 @@ class SenderBase:
         For the Cascade protocol the net number of exposed bits is the same as the
         number of exposed bits.
         """
-        return self._number_of_exposed_bits
+        return self._net_exposed_bits

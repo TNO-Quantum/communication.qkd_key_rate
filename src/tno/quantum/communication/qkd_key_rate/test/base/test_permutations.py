@@ -28,7 +28,7 @@ def test_inverted_permutations() -> None:
     )
 
     for permutation, inverted_permutation in zip(
-        permutations.permutations, permutations.inverted_permutations
+        permutations.permutations, permutations.inverted_permutations, strict=True
     ):
         assert [permutation[i] for i in inverted_permutation] == list(
             range(message_size)
@@ -72,7 +72,7 @@ def test_shorten_pass() -> None:
     permutations.shorten_pass(2, 110)
 
     for permutation, inverted_permutation in zip(
-        permutations.permutations, permutations.inverted_permutations
+        permutations.permutations, permutations.inverted_permutations, strict=True
     ):
         assert [permutation[i] for i in inverted_permutation] == list(
             range(len(permutation))
