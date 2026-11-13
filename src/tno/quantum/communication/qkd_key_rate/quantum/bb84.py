@@ -1014,7 +1014,7 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             - number_single_events_basis_X
             * (
                 h(
-                    number_single_photon_errors_in_basis_Z
+                    error_rate_single_photon_basis_Z
                     + delta(
                         n_X_observed,
                         n_Z_observed,
