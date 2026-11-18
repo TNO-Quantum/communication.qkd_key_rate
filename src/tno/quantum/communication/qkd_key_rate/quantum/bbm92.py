@@ -505,18 +505,27 @@ class BBM92FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             float(mu[0] / 2),
         )
 
-        # Compute the number of pulses in the X basis. The Z-basis follows
-        n_X_observed = (
-            gain_lambda * probability_basis_X * self.number_of_pulses
-            if n_X is None
-            else n_X
-        )
+        # n_X is the number of *sent* X-basis pulses, like the shared finite
+        # key-rate interface and BB84. Convert both paths into detections.
+        if n_X is None:
+            n_X_sent = probability_basis_X * self.number_of_pulses
+        else:
+            if not 0 <= n_X <= self.number_of_pulses:
+                error_msg = "n_X must be between zero and the total pulse count."
+                raise ValueError(error_msg)
+            if probability_basis_X == 0 and n_X != 0:
+                error_msg = "n_X must be zero when probability_basis_X is zero."
+                raise ValueError(error_msg)
+            if probability_basis_X == 1 and n_X != self.number_of_pulses:
+                error_msg = "n_X must equal all pulses when probability_basis_X is one."
+                raise ValueError(error_msg)
+            n_X_sent = n_X
 
-        # Check if the number of pulses in the X basis is positive
+        n_X_observed = gain_lambda * n_X_sent
+
+        # Without any X-basis pulses, the estimated key rate is zero.
         if n_X_observed <= 0:
-            return _fallback_key_rate_estimate(
-                x, self.last_x, self.last_positive_key_rate
-            )
+            return 0.0
 
         # These are the error rates corresponding to the X and Z basis
         # A bound is used for delta_phase (Z) errors
