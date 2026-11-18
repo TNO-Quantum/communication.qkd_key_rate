@@ -161,17 +161,11 @@ class WinnowSender(SenderBase):
 
     def discard_parity_bits(self) -> None:
         """The first bit of every parity block is discarded."""
-        old_index = 0
-        counter = -1
-        while old_index < self.message.length:
-            if ((old_index % self.block_size) == 0) and (
-                old_index != (self.number_of_blocks * self.block_size)
-            ):
-                # Is it the first bit of a block and is it not the last block
-                counter += 1
-                self._net_exposed_bits -= 1
-                self.message.pop(old_index - counter)
-            old_index += 1
+        # Delete from right to left so earlier block offsets stay valid.
+        # The message length shrinks during deletion; it cannot be the loop bound.
+        for index_block in range(self.number_of_blocks - 1, -1, -1):
+            self.message.pop(index_block * self.block_size)
+            self._net_exposed_bits -= 1
 
         self.block_size -= 1
         self.transcript += (
@@ -247,26 +241,16 @@ class WinnowSender(SenderBase):
 
         No communication is needed to discard syndrome bits.
         """
-        counter_for_error_blocks = 0
-        removed_bits = []
-        for index_block in range(self.number_of_blocks):
-            # If we have not hit all bad blocks, and the counter is at a bad block
-            if (
-                counter_for_error_blocks < self.number_of_bad_blocks
-                and self.bad_blocks_array[counter_for_error_blocks] == index_block
-            ):
-                power = 0
-                counter_for_error_blocks += 1
-                offset_counter = -1
-                for index_bit in range(self.block_size):
-                    if (index_bit + 1) == (1 << power):
-                        # Discard bits if they are at a location with index a
-                        # power of 2 - 1
-                        power += 1
-                        offset_counter += 1
-                        self._net_exposed_bits -= 1
-                        removed_bits.append(index_bit - offset_counter)
-                        self.message.pop(index_bit - offset_counter)
+        # Block indices refer to positions before any syndrome bits are removed.
+        # Remove the highest positions first, within each flagged block.
+        for index_block in reversed(
+            self.bad_blocks_array[: self.number_of_bad_blocks]
+        ):
+            for power in range(self.syndrome_length - 1, -1, -1):
+                index_bit = (1 << power) - 1
+                if index_bit < self.block_size:
+                    self.message.pop(index_block * self.block_size + index_bit)
+                    self._net_exposed_bits -= 1
 
         self.transcript += (
             f"\tBoth discard the syndrome bits for pass {self.schedule.pass_number}.\n"
