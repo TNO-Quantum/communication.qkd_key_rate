@@ -27,7 +27,7 @@ class Detector:
         "efficiency_system",
     )
 
-    def __init__(  # noqa: PLR0912, PLR0913, C901, PLR0915
+    def __init__(  # noqa: PLR0912, PLR0913, PLR0917, C901, PLR0915
         self,
         name: str,
         jitter_source: float,
@@ -171,7 +171,7 @@ class Detector:
             cls(**detector_kwargs) for detector_kwargs in detector.to_dict("records")
         ]
 
-    def customise(  # noqa: PLR0913, C901
+    def customise(  # noqa: PLR0913, PLR0917, C901
         self,
         name: str | None = None,
         jitter_source: float | None = None,

@@ -293,7 +293,7 @@ def solve_lp(
     return result
 
 
-def solve_finite_lp(  # noqa: PLR0913
+def solve_finite_lp(  # noqa: PLR0913, PLR0917
     target_vacuum: float,
     target_single: float,
     probabilities_intensity_j: NDArray[np.float64],
@@ -929,9 +929,9 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             / probability_single_photon_per_intensity.sum()
         )
 
-        # Solve linear programs to get the number of single photon events
-        # and the number of errors in these single photon events in the Z basis
-        # For vacuum pulses, the error is 0.5
+        # Solve linear programs to get a lower bound on the number of single photon
+        # events and an upper bound on the number of errors in these single photon
+        # events in the Z basis. For vacuum pulses, the error is 0.5
         (_, number_single_photon_events_in_basis_Z) = (
             solve_finite_lp(
                 target_vacuum=0,
@@ -950,7 +950,7 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         (_, number_single_photon_errors_in_basis_Z) = (
             solve_finite_lp(
                 target_vacuum=0,
-                target_single=1,
+                target_single=-1,
                 probabilities_intensity_j=probability_basis_Z_normalized,
                 mu=mu,
                 max_num_photons=max_num_photons,
@@ -1014,7 +1014,7 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             - number_single_events_basis_X
             * (
                 h(
-                    number_single_photon_errors_in_basis_Z
+                    error_rate_single_photon_basis_Z
                     + delta(
                         n_X_observed,
                         n_Z_observed,

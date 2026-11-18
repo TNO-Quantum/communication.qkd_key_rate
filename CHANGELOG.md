@@ -1,4 +1,16 @@
-# 2.0.4 (2025 - 02 - 23)
+# 2.0.5 (2026 - 11 - 18)
+
+## Bugfixes
+
+* **BB84FiniteKeyRateEstimate privacy amplification**: The method `BB84FiniteKeyRateEstimate.compute_rate` passed the number of single-photon errors in the Z-basis to the binary entropy function instead of the single-photon error rate. Because the binary entropy evaluates to zero for inputs outside the probability range, the privacy-amplification term vanished and the key-rate was overestimated. Reported and fixed by [@Johnny-Kao](https://github.com/Johnny-Kao) in [#7](https://github.com/TNO-Quantum/communication.qkd_key_rate/pull/7).
+* **BB84FiniteKeyRateEstimate single-photon errors**: The linear program bounding the number of errors in single-photon Z-basis events minimised this quantity, giving a lower bound instead of the upper bound required for a secure key-rate (Attema et al. 2021, Eq. 33). The asymptotic estimate already used the upper bound.
+
+As a result of these fixes, finite BB84 key-rates are lower than in previous versions (typically by about 10–15%), and the maximum loss with a positive key-rate is up to 2 dB lower.
+
+* Drop python3.10 support
+
+
+# 2.0.4 (2026 - 02 - 23)
 
 ## Bugfixes
 

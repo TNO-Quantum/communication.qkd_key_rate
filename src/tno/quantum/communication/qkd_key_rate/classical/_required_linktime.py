@@ -122,9 +122,9 @@ def compute_estimate_on_communication(
 
         start_block_size = ERROR_RATES_TO_BLOCK_SIZES[er]
         number_of_passes = 8
-        block_sizes = [start_block_size * 2**i for i in range(number_of_passes)]
+        initial_block_sizes = [start_block_size * 2**i for i in range(number_of_passes)]
         max_sizes = np.repeat([message_length // 2], number_of_passes)
-        block_sizes = np.vstack([block_sizes, max_sizes]).min(axis=0)
+        block_sizes = np.vstack([initial_block_sizes, max_sizes]).min(axis=0)
 
         return int(
             1

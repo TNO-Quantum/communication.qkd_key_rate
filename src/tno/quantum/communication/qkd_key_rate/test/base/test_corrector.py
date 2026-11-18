@@ -104,7 +104,7 @@ def test_calculate_key_reconciliation_rate_winnow() -> None:
     error_message = input_message.apply_errors(error_rate=error_rate)
 
     schedule = Schedule.schedule_from_error_rate(error_rate=error_rate)
-    number_of_passes = np.sum(schedule.schedule)
+    number_of_passes = int(np.sum(schedule.schedule))
     permutations = Permutations.random_permutation(
         number_of_passes=number_of_passes, message_size=message_length
     )

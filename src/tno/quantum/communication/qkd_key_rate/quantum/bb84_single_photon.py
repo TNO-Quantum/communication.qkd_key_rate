@@ -32,8 +32,8 @@ splitting (PNS) attacks.
     >>>
     >>> finite_key_rate = BB84SingleAsymptoticKeyRateEstimate(detector=detector)
     >>> x, rate = finite_key_rate.optimize_rate(attenuation=0.2)
-    >>> print(f"{x['mu']=}, {rate=}")
-    x['mu']=array([0.89916328]), rate=0.858693993504011
+    >>> print(f"mu={x['mu'].round(6)}, rate={rate:.8f}")
+    mu=[0.899163], rate=0.85869399
 """
 
 from __future__ import annotations
