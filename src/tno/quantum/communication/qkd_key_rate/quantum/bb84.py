@@ -360,7 +360,7 @@ def solve_finite_lp(  # noqa: PLR0913, PLR0917
     # Compute the probability that a photon state is send out with more than
     # the defined maximum number of photons.
     tail_probability_maximum_photons = float(
-        scipy.stats.poisson.sf(max_num_photons + 1, mu).dot(probabilities_intensity_j)
+        scipy.stats.poisson.sf(max_num_photons, mu).dot(probabilities_intensity_j)
     )
 
     # Bound on the contribution for the number of photons above the cut
@@ -376,14 +376,19 @@ def solve_finite_lp(  # noqa: PLR0913, PLR0917
     # Below, constraints are defined. The first two letters of the variables
     # define the type of constraint: lb = lower bound, ub = upper bound, eq = equality
     # Constraints on the number of $m$ photon states per intensity $j$
-    lb_num_photons_m_given_intensity_j_lhs = -np.hstack(
-        (probability_intensity_j_given_m_photon_state, np.eye(number_of_intensities))
+    # Paper Eqs. (54)-(56): the finite model can account for fewer events
+    # than observed because omitted >M-photon states contribute nonnegative
+    # detections. With T_j the truncated model and d_j the Hoeffding
+    # deviation, T_j <= observed_j + d_j <= T_j + lambda.
+    # Thus T_j - d_j <= observed_j and -T_j + d_j <= -observed_j + lambda.
+    lb_num_photons_m_given_intensity_j_lhs = np.hstack(
+        (probability_intensity_j_given_m_photon_state, -np.eye(number_of_intensities))
     )
-    lb_num_photons_m_given_intensity_j_rhs = -observed_count
+    lb_num_photons_m_given_intensity_j_rhs = observed_count
     ub_num_photons_m_given_intensity_j_lhs = np.hstack(
-        (probability_intensity_j_given_m_photon_state, np.eye(number_of_intensities))
+        (-probability_intensity_j_given_m_photon_state, np.eye(number_of_intensities))
     )
-    ub_num_photons_m_given_intensity_j_rhs = observed_count + lambda_num_photons_cut
+    ub_num_photons_m_given_intensity_j_rhs = -observed_count + lambda_num_photons_cut
 
     # Constraints on the number of $m$ photon states
     lb_num_photons_m_lhs = -np.eye(
@@ -401,7 +406,6 @@ def solve_finite_lp(  # noqa: PLR0913, PLR0917
                 probability_m_photon_state,
                 epsilon_num_photons_M,
             )
-            * number_of_pulses
         ),
         np.repeat(observed_total, max_num_photons + 1),
     )
@@ -800,6 +804,37 @@ class BB84AsymptoticKeyRateEstimate(AsymptoticKeyRateEstimate):
         raise OptimizationError(error_msg)
 
 
+def _finite_bb84_failure_budget(
+    max_num_photons: int,
+    number_of_intensities: int,
+    epsilon_1: float,
+    epsilon_2: float,
+    epsilon_3: float,
+    epsilon_lp: float,
+) -> float:
+    """Conservative union bound for the three finite-key LPs, per Eq. (39).
+
+    We solve two Z-basis programs (event and error estimates) and one X-basis
+    program. Count each LP's photon-number, intensity, and tail bounds once,
+    even when their underlying random events overlap. This deliberately
+    overestimates the statistical failure probability.
+    """
+    photon_constraints = max_num_photons + 1
+    # Two Z-basis programs independently bound the event and error counts.
+    epsilon_e = 2 * (photon_constraints + number_of_intensities) * epsilon_lp
+    epsilon_x = (photon_constraints + number_of_intensities) * epsilon_lp
+    # Each LP has a truncated-photon tail bound for every intensity.
+    epsilon_truncation = 3 * number_of_intensities * epsilon_lp
+    return (
+        2 * epsilon_1
+        + epsilon_2
+        + epsilon_3
+        + epsilon_e
+        + epsilon_x
+        + epsilon_truncation
+    )
+
+
 class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
     """BB84 protocol with a finite number of pulses.
 
@@ -848,14 +883,14 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         Returns:
             key-rate
         """
-        # Security parameters
-        probability_abort = 2e-50
-        epsilon_security = 2e-50
-        epsilon_correct = 2e-50
-        epsilon_1 = 2e-55
-        epsilon_2 = 2e-55
-        epsilon_3 = 2e-55
-        epsilon = 1e-7
+        # Security parameters from Attema et al. (2021), Section 6.2.
+        # The paper uses powers of two (2**-50, NOT 2e-50).
+        probability_abort = 2**-50
+        epsilon_security = 2**-50
+        epsilon_correct = 2**-50
+        epsilon_1 = 2**-55
+        epsilon_2 = 2**-55
+        epsilon_3 = 2**-55
 
         # The probabilities sum to 1, these are the conditional probabilities per basis
         probability_basis_X = np.asarray(probability_basis_X)
@@ -875,6 +910,16 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             )
 
         gain, error_rate = compute_gain_and_error_rate(self.detector, mu, attenuation)
+
+        # The paper distinguishes N_X/N_Z (transmitted/sifted by basis)
+        # from n_X/n_Z (observed detections). Chernoff terms use N_B;
+        # Hoeffding and error-correction terms use n_B.
+        if n_X is None:
+            n_X_sent = float(probability_basis_X.sum() * self.number_of_pulses)
+            n_Z_sent = float(probability_basis_Z.sum() * self.number_of_pulses)
+        else:
+            n_X_sent = float(n_X)
+            n_Z_sent = float(self.number_of_pulses - n_X)
 
         # Compute number of detection events per intensity per basis
         if n_X is None:
@@ -908,17 +953,30 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             np.max((int(scipy.stats.poisson.isf(1e-16, mu).max()), 5))
         )
 
-        # Epsilon values to be considered in the optimization.
-        # Values for the intensities and the number of photons per pulse are used,
-        # as well as the number of photon per pulse given a basis
-        epsilon_single_photon = 1e-7
-        epsilon_intensity_j: NDArray[np.float64] = np.repeat(1e-8, mu.shape[0])
+        # Match the paper's LP confidence levels (Section 6.2) and count
+        # all three LP calls in the total secrecy budget of Eq. (39).
+        epsilon_single_photon = epsilon_1
+        epsilon_lp = 2**-60
+        epsilon_intensity_j: NDArray[np.float64] = np.repeat(
+            epsilon_lp, mu.shape[0]
+        )
         epsilon_num_photons_M: NDArray[np.float64] = np.repeat(
-            1e-8, int(max_num_photons + 1)
+            epsilon_lp, max_num_photons + 1
         )
         epsilon_num_photons_M_in_basis_B: NDArray[np.float64] = np.repeat(
-            1e-8, int(mu.shape[0])
+            epsilon_lp, mu.shape[0]
         )
+        epsilon = _finite_bb84_failure_budget(
+            max_num_photons,
+            len(mu),
+            epsilon_1,
+            epsilon_2,
+            epsilon_3,
+            epsilon_lp,
+        )
+        if not 0 < epsilon < epsilon_security:
+            error_msg = "Finite BB84 security failures exceed the secrecy budget."
+            raise ValueError(error_msg)
 
         # The probability of a single photon pulse for each of the intensities
         probability_single_photon_per_intensity: NDArray[np.float64] = (
@@ -939,13 +997,13 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
                 probabilities_intensity_j=probability_basis_Z_normalized,
                 mu=mu,
                 max_num_photons=max_num_photons,
-                number_of_pulses=n_Z_observed,
+                number_of_pulses=n_Z_sent,
                 observed_count=n_Z_observed_per_intensity,
                 epsilon_mu_j=epsilon_intensity_j,
                 epsilon_num_photons_M=epsilon_num_photons_M,
                 epsilon_num_photons_M_in_basis_B=epsilon_num_photons_M_in_basis_B,
             )["x"][0:2]
-            * n_Z_observed
+            * n_Z_sent
         )
         (_, number_single_photon_errors_in_basis_Z) = (
             solve_finite_lp(
@@ -954,16 +1012,18 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
                 probabilities_intensity_j=probability_basis_Z_normalized,
                 mu=mu,
                 max_num_photons=max_num_photons,
-                number_of_pulses=n_Z_observed,
+                number_of_pulses=n_Z_sent,
                 observed_count=number_of_errors_per_intensity_basis_Z,
                 epsilon_mu_j=epsilon_intensity_j,
                 epsilon_num_photons_M=epsilon_num_photons_M,
                 epsilon_num_photons_M_in_basis_B=epsilon_num_photons_M_in_basis_B,
             )["x"][0:2]
-            * n_Z_observed
+            * n_Z_sent
         )
-        if number_single_photon_events_in_basis_Z == 0:
-            error_rate_single_photon_basis_Z = 1e-19
+        if number_single_photon_events_in_basis_Z <= 0:
+            # No lower bound on single-photon detections => no defensible
+            # low phase-error estimate; its entropy penalty is maximal.
+            error_rate_single_photon_basis_Z = 0.5
         else:
             error_rate_single_photon_basis_Z = np.clip(
                 number_single_photon_errors_in_basis_Z
@@ -980,17 +1040,20 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             target_vacuum=1,
             target_single=1
             - h(
-                error_rate_single_photon_basis_Z
-                + delta(
-                    n_X_observed,
-                    n_Z_observed,
-                    epsilon_single_photon,
+                min(
+                    error_rate_single_photon_basis_Z
+                    + delta(
+                        n_X_observed,
+                        n_Z_observed,
+                        epsilon_single_photon,
+                    ),
+                    0.5,
                 )
             ),
             probabilities_intensity_j=probability_basis_X_normalized,
             mu=mu,
             max_num_photons=max_num_photons,
-            number_of_pulses=n_X_observed,
+            number_of_pulses=n_X_sent,
             observed_count=n_X_observed_per_intensity,
             epsilon_mu_j=epsilon_intensity_j,
             epsilon_num_photons_M=epsilon_num_photons_M,
@@ -1000,7 +1063,7 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
         (
             number_vacuum_events_basis_X,
             number_single_events_basis_X,
-        ) = res["x"][0:2] * n_X_observed
+        ) = res["x"][0:2] * n_X_sent
 
         if np.isnan(res["fun"]) or np.isinf(res["fun"]):
             return _fallback_key_rate_estimate(
@@ -1014,11 +1077,14 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
             - number_single_events_basis_X
             * (
                 h(
-                    error_rate_single_photon_basis_Z
-                    + delta(
-                        n_X_observed,
-                        n_Z_observed,
-                        epsilon_1,
+                    min(
+                        error_rate_single_photon_basis_Z
+                        + delta(
+                            n_X_observed,
+                            n_Z_observed,
+                            epsilon_1,
+                        ),
+                        0.5,
                     )
                 )
             )
@@ -1217,5 +1283,50 @@ class BB84FiniteKeyRateEstimate(FiniteKeyRateEstimate):
                     args["attenuation"] += 1e-8
                     continue
                 return self._extract_parameters(res.x), float(rate)
+        # Recover from false negative local minima without changing the
+        # existing trust-constr success path or the physical objective.
+        n_intensities = self.number_of_decoy + 1
+        x_weights = np.linspace(3.0, 1.0, n_intensities)
+        x_weights *= 0.8 / x_weights.sum()
+        exploratory_start = np.hstack((
+            np.geomspace(0.2, 0.01, n_intensities),
+            x_weights,
+            np.full(n_intensities, 0.2 / n_intensities),
+        ))
+        seeds = [exploratory_start, np.asarray(x0, dtype=float)]
+        for seed in seeds:
+            try:
+                alternative = scipy.optimize.minimize(
+                    self._f, seed, args={"attenuation": attenuation},
+                    method="SLSQP", jac="2-point",
+                    constraints=constraint, bounds=optimize_bounds,
+                    options={"maxiter": 300, "ftol": 1e-12},
+                )
+            except OptimizationError:
+                continue
+            candidate = np.asarray(alternative.x, dtype=float)
+            rate = float(np.atleast_1d(-alternative.fun)[0])
+            tol = 1e-7
+            if not (
+                alternative.success and candidate.shape == x0.shape
+                and np.isfinite(candidate).all() and np.isfinite(rate)
+                and rate >= 0
+                and np.all(candidate >= lower_bound - tol)
+                and np.all(candidate <= upper_bound + tol)
+                and np.all(A @ candidate >= b - tol)
+                and np.all(A @ candidate <= B + tol)
+            ):
+                continue
+            params = self._extract_parameters(candidate)
+            try:
+                verified = float(np.asarray(
+                    self.compute_rate(attenuation=attenuation, **params)
+                ).item())
+            except OptimizationError:
+                continue
+            if np.isfinite(verified) and verified >= 0 and np.isclose(
+                rate, verified, rtol=1e-7, atol=1e-12
+            ):
+                return params, verified
         error_msg = "Unable to find solution for optimal key rate."
         raise OptimizationError(error_msg)
