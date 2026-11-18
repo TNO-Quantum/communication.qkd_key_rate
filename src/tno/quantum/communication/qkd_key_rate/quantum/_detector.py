@@ -124,7 +124,7 @@ class Detector:
         if dark_count_rate is not None and dark_count_frequency is not None:
             self.dark_count_rate = dark_count_rate
             self.dark_count_frequency = dark_count_frequency
-            if not (dark_count_rate - dark_count_frequency * self.interval) < tol:
+            if not abs(dark_count_rate - dark_count_frequency * self.interval) < tol:
                 error_msg = "Incompatible dark count rate and dark count frequency."
                 raise ValueError(error_msg)
 
@@ -145,7 +145,7 @@ class Detector:
         if efficiency_party is not None and efficiency_detector is not None:
             self.efficiency_party = efficiency_party
             self.efficiency_detector = efficiency_detector
-            if not (efficiency_party - efficiency_system * efficiency_detector) < tol:
+            if not abs(efficiency_party - efficiency_system * efficiency_detector) < tol:
                 error_msg = "Incompatible efficiency and efficiency detector."
                 raise ValueError(error_msg)
         if efficiency_party is None and efficiency_detector is not None:
@@ -203,6 +203,10 @@ class Detector:
             new_parameters.update(detection_window=detection_window)
         if efficiency_system is not None:
             new_parameters.update(efficiency_system=efficiency_system)
+            # Keep the detector efficiency as the independent parameter.
+            # Recompute party efficiency instead of carrying its stale value.
+            if efficiency_detector is None and efficiency_party is None:
+                new_parameters.update(efficiency_party=None)
         if polarization_drift is not None:
             new_parameters.update(polarization_drift=polarization_drift)
         if error_detector is not None:
@@ -215,6 +219,10 @@ class Detector:
         if detection_frequency is not None or interval is not None:
             new_parameters.update(detection_frequency=detection_frequency)
             new_parameters.update(interval=interval)
+            # Changing the detection interval changes dark counts per window,
+            # but should not silently change the physical rate per second.
+            if dark_count_rate is None and dark_count_frequency is None:
+                new_parameters.update(dark_count_rate=None)
 
         if efficiency_detector is not None or efficiency_party is not None:
             new_parameters.update(efficiency_detector=efficiency_detector)
